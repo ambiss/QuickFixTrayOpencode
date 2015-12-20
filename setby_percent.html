@@ -6,6 +6,7 @@
 {# antes de qualquer coisa deve-se validar que o produto nao tenha variacao como o IF a seguir #}
 {% if not product.has_other_prices %}
 
+    {# valida se o produto encontra-se configurado no ADM como em promocao #}
     {% if promotion %}
     <div class="get-discount">
         {% set price        = product.price %}
