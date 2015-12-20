@@ -3,6 +3,7 @@
 {# Rotulo exibiria algo desta forma: `-20%` #}
 {# @profson december 2015 #}
 
+{# antes de qualquer coisa deve-se validar que o produto nao tenha variacao como o IF a seguir #}
 {% if not product.has_other_prices %}
 
     {% if promotion %}
