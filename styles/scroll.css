@@ -1,0 +1,90 @@
+/***
+* Estilo aplicado em scrollbars, utlizado no loja rafcar
+*/
+
+.list-cat-brands ::-webkit-scrollbar { 
+    width: 8px;
+    height: 10px;
+    background: #f4f4f4;
+}
+.list-cat-brands ::-webkit-scrollbar-button { 
+    
+}
+.list-cat-brands ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+.list-cat-brands ::-webkit-scrollbar-track-piece {
+    
+}
+.list-cat-brands ::-webkit-scrollbar-thumb {
+    background: #B42232;
+    
+    border-radius: 15px;    
+}
+.list-cat-brands ::-webkit-scrollbar-corner {
+}
+
+
+/* For IE */
+.list-cat-brands {
+    scrollbar-base-color: #aa0e24;
+}
+
+.list-cat-brands {
+    scrollbar-3dlight-color: #aa0e24;
+}
+.list-cat-brands { 
+    scrollbar-highlight-color: #aa0e24;
+}
+.list-cat-brands {
+    scrollbar-track-color: #f9f9f9;
+}
+.list-cat-brands { 
+    scrollbar-arrow-color: #B42232;
+}
+
+
+
+.scroolbx ::-webkit-scrollbar { 
+    width: 8px;
+    height: 10px;
+    background: #f4f4f4;
+}
+.scroolbx ::-webkit-scrollbar-button { 
+    
+}
+.scroolbx ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+.scroolbx ::-webkit-scrollbar-track-piece {
+    
+}
+.scroolbx ::-webkit-scrollbar-thumb {
+    background: #B42232;
+    
+    border-radius: 15px;    
+}
+.scroolbx ::-webkit-scrollbar-corner {
+}
+
+
+/* For IE */
+.scroolbx {
+    scrollbar-base-color: #aa0e24;
+}
+
+.scroolbx {
+    scrollbar-3dlight-color: #aa0e24;
+}
+.scroolbx { 
+    scrollbar-highlight-color: #aa0e24;
+}
+.scroolbx {
+    scrollbar-track-color: #f9f9f9;
+}
+.scroolbx { 
+    scrollbar-arrow-color: #B42232;
+}
+
+
+
