@@ -1,0 +1,26 @@
+.top-fx {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: -300px;
+    visibility: hidden;
+    opacity: 0;
+    
+    min-height: 199.9px !important;
+    
+    @include transition();
+    @media screen and (max-width: 47em) {
+        display: none; // Nao exibe em mobiles - para exibir remover a regra
+    }
+}
+
+
+.top-fx.show-head {
+    top: 0;
+    visibility: visible;
+    opacity: .99;
+}
+
+
+// Inserir o estilo [visual] da barra flutuante
+
