@@ -4,12 +4,12 @@ jQuery(document).ready(function () {
         var topScroll = Number(jQuery(window).scrollTop());
 
         if (topScroll >= 550) {
-            if (!jQuery('.header.top-fx').hasClass('show-bar')) {
-                jQuery('.header.top-fx').addClass('show-bar');
+            if (!jQuery('.top-fx').hasClass('show-bar')) {
+                jQuery('.top-fx').addClass('show-bar');
             }
         } else {
-            if (jQuery('.header.top-fx').hasClass('show-bar')) {
-                jQuery('.header.top-fx').removeClass('show-bar');
+            if (jQuery('.top-fx').hasClass('show-bar')) {
+                jQuery('.top-fx').removeClass('show-bar');
             }
         }
     });
