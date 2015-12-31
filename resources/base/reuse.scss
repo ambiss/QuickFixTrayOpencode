@@ -1,0 +1,147 @@
+// ---- reuse variables and mixins in all website
+
+// : Variables 
+
+//typograph
+$helvetica: Helvetica, Arial, sans-serif;
+
+//color
+$paleta: rgba(159, 77, 107, 1);
+$font: rgba(115, 115, 115, 1);
+$footer: rgba(232, 229, 219, 1);
+
+// end Variables;
+
+// ----
+
+
+// : Mixins 
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+@mixin display($display: inline-block, $va: top) {
+    display: $display;
+    vertical-align: $va;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $effect: ease-in-out) {
+	-webkit-transition: $property $duration $effect;
+	-moz-transition: $property $duration $effect;
+	-ms-transition: $property $duration $effect;
+    transition: $property $duration $effect;
+}
+@mixin user-select($value:none) {
+    -webkit-user-select: $value;  
+    -moz-user-select: $value;     
+    -ms-user-select: $value;     
+    user-select: $value;  
+}
+
+@mixin ccX($value: -50%) {
+    -webkit-transform: translateX($value);
+    -moz-transform: translateX($value);
+    -ms-transform: translateX($value);
+    transform: translateX($value);
+}
+
+@mixin ccY($value: -50%) {
+    -webkit-transform: translateY($value);
+    -moz-transform: translateY($value);
+    -ms-transform: translateY($value);
+    transform: translateY($value);
+}
+@mixin translate($value: 0, $value-second: 0) {
+    -webkit-transform: translate($value, $value-second);
+    -moz-transform: translate($value, $value-second);
+    -ms-transform: translate($value, $value-second);
+    transform: translate($value, $value-second);
+}
+@mixin tY($value: 100%) {
+    -webkit-transform: translateY($value);
+    -moz-transform: translateY($value);
+    -ms-transform: translateY($value);
+    transform: translateY($value);
+}
+@mixin tX($value: 100%) {
+    -webkit-transform: translateX($value);
+    -moz-transform: translateX($value);
+    -ms-transform: translateX($value);
+    transform: translateX($value);
+}
+
+@mixin font($size: 12px, $weight: 400, $family: $helvetica, $line-height: 1.1) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+    line-height: $line-height;
+}
+
+// Mixins Decorates
+//:----------- Backgroundns : ----
+@mixin back($path, $color: transparent, $repeat: no-repeat, $position: 0 0) {
+    background: $color url($path) $repeat $position;
+}
+@mixin backimg($path) {
+    background-image: url($path);
+}
+@mixin backcolor($c: #fff) {
+    background-color: $c;
+}
+@mixin transparent($c: transparent) {
+    background-color: $c;
+}
+//end ---------- Backgrounds ; ----
+
+@mixin outline($color: #333, $size: 1px, $style: solid) {
+    outline: $size $style $color;
+}
+
+//:----------- Borders : ----
+@mixin border($color: #333, $size: 1px, $style: solid) {
+    border: $size $style $color;
+}
+@mixin border-top ($color: #333, $size: 1px, $style: solid) {
+    border-top: $size $style $color;
+}
+@mixin border-right ($color: #333, $size: 1px, $style: solid) {
+    border-right: $size $style $color;
+}
+@mixin border-bottom ($color: #333, $size: 1px, $style: solid) {
+    border-bottom: $size $style $color;
+}
+@mixin border-left($color: #333, $size: 1px, $style: solid) {
+    border-left: $size $style $color;
+}
+@mixin border-transparent($size: 1px) {
+    border: $size solid transparent;
+} 
+@mixin border-t-transparent($size: 1px) {
+    border-top: $size solid transparent;
+} 
+@mixin border-r-transparent($size: 1px) {
+    border-right: $size solid transparent;
+} 
+@mixin border-b-transparent($size: 1px) {
+    border-bottom: $size solid transparent;
+} 
+@mixin border-l-transparent($size: 1px) {
+    border-left: $size solid transparent;
+} 
+@mixin border-tb-transparent($size: 1px) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+} 
+@mixin border-side-transparent($size: 1px) {
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+}
+//end ---------- Borders ; ----
+
+// end Mixins;
+
+// ----
