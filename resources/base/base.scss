@@ -1,0 +1,144 @@
+/**
+ * Base / Settings
+ */
+ 
+ // Setting Boxsize
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html, body {
+    font-size: 16px;
+}
+
+:focus, :hover, :active {
+    outline: none;
+}
+
+
+// resize wrapper and centralization : 
+.res {
+    width: 68.9%;
+} // 1680 ~ 1919
+
+.cc {
+    margin: 0 auto 0;
+}
+
+.res-cc {
+    width: 68.9%;
+    margin: 0 auto 0;
+} // 1680 ~ 1919
+
+// resize wrapper and centralization end
+
+// typograph
+$helvetica: Helvetica, Arial, Verdana, sans-serif;
+$opensans: 'Open Sans', Helvetica, Arial, Verdana, sans-serif;
+$customtypo: 'Marck Script', cursive;
+$primary-font: 'Open Sans', Arial, Helvetica, Verdana, sans-serif;
+
+
+
+// adaptive images
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+// Slider Slick
+.slick-slider {
+    border: 0; outline: 0;
+    &:focus, &:hover, &:active {
+        border: 0; outline: 0;
+        a {
+            border: 0; outline: 0;
+        }
+    }
+    a {
+        border: 0; outline: 0;
+    }
+}
+
+// align
+.c-left {
+    text-align: left;
+}
+
+.c-center {
+    text-align: center;
+}
+
+.c-right {
+    text-align: right;
+}
+
+// : Media
+
+@media screen and (max-width: 480em) {
+    html, body {
+        font-size: 24px;
+    }
+    .res {
+        width: 76%;
+    }
+} // 7680 -> 8k
+
+
+@media screen and (max-width: 320em) {
+    html, body {
+        font-size: 22px;
+    }
+    .res {
+        width: 86%;
+    }
+} // 5120 -> iMac 5k
+
+
+@media screen and (max-width: 160em) {
+    html, body {
+        font-size: 18px;
+    }
+    .res {
+        width: 80%;
+    }
+} // 2560 -> UltraWide
+
+
+@media screen and (max-width: 120em) {
+    html, body {
+        font-size: 16.6px;
+    }
+    .res {
+        width: 78%;
+    }
+} // 1920 =< - Desktop
+
+
+@media screen and (max-width: 90em) {
+    html, body {
+        font-size: 16px;
+    }
+    .res {
+        width: 90%;
+    }
+} // 1388 =< - Desktop
+
+// : Media
+@media screen and (max-width: 60em) {
+    html, body {
+        font-size: 15.6px;
+    }
+    .res {
+        width: 98%;
+    }
+} // 1024 =< - Desktop
+
+// end Media;
