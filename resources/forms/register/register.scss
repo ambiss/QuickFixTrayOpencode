@@ -1,0 +1,73 @@
+.page-register {
+    #fisica,
+    #juridica {
+        margin: 1em 0 0;
+        
+        p {
+            font-size: 0;
+        }
+    }
+    
+    #fisica + strong,
+    #juridica + strong {
+        display: none;
+    }
+    
+    #frm2 label {
+        font-size: 0;
+        
+        #pf_sexo_m ~ span,
+        #pf_sexo_f ~ span {
+            font-size: 12px;
+            vertical-align: top !important; // ficar esperto tem important
+            padding: 0 5px 0;
+        }
+        
+        .msg-email-imp {
+            &:before {
+                content: 'Desejo receber e-mails promocionais';
+                display: inline-block;
+                vertical-align: top;
+                
+                font-size: 12px;
+                
+                padding-left: 8px;
+            }
+        }
+    }
+    
+    #frm2 .board label.dif {
+        color: #666;
+        font-size: 16px;
+        font-family: 'Oswald', sans-serif;
+        
+        padding: 0 3px;
+        vertical-align: top;
+        
+    }
+    
+    #frm2 input {
+        padding: 10px;
+        border-radius: 2px;
+        border: 0;
+        box-shadow: 0px 0px 3px #333;
+        margin: .2em 0;
+        
+        border-left: 3px solid #f00;
+        
+        font-size: 12px;
+    }
+    
+    #frm2 #telefone_cliente {
+        border-left: 3px solid #f00;
+    }
+    #frm2 .opcional {
+        border-left: 0;
+    }
+    
+    #frm2 input[type="checkbox"],
+    #frm2 input[type="radio"] {
+        box-shadow: 0 0 0 transparent;
+    }
+} // page-register    
+
