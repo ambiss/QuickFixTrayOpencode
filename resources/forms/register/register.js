@@ -108,4 +108,4 @@ jQuery('#cobranca_estado').attr('placeholder', 'Estado');
 
 
 // Gerenciando visibilidade dos Rotulos
-jQuery('#email').after('<span class="msg-add-imp"></span>');
+jQuery('#email').after('<span class="msg-add"></span>');
