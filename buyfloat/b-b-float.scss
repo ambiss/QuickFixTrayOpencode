@@ -1,0 +1,63 @@
+.engine-box-buy {
+    width: 190px;
+    position: fixed;
+    right: 0;
+    
+    .command-box-buy {
+        width: 31px;
+        height: 33px;
+        
+        position: absolute;
+        left: -26px;
+        
+        background-color: rgba(147, 14, 0, 1);
+        
+        svg {
+            width: 77%;
+            path { fill: #fff; }
+            
+            -ms-transform: rotate(181deg); 
+            -webkit-transform: rotate(181deg); 
+            transform: rotate(181deg);
+            
+            margin-left: 3px;
+        }
+        
+    } // command-box-buy
+    
+}  //engine-box-buy
+
+
+.box-buy-hide {
+    right: -230px;
+    top: 6em;
+    width: 190px;
+    padding-top: 10px;
+    border-width: 1px 0px;
+    border-style: solid none;
+    border-color: #E7E7E7 -moz-use-text-color;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    
+    .produto-formas-pagamento {
+        display: none; // apaga a frase `ver todas as formas de pagamento` e impede o acesso ao container delas 
+    }
+    
+} // box-buy-hide
+
+.box-buy-show {
+    transition: right 0.2s linear 0s;
+    position: fixed;
+    right: 20px;
+    top: 30px;
+    width: 190px;
+    z-index: 9999;
+    background: #FFF none repeat scroll 0% 0%;
+    border: 1px solid #E5E5E5;
+    padding: 12px 10px;
+    box-shadow: 4px 3px 0px 0px rgba(0, 0, 0, 0.1);
+    
+} // box-buy-show
