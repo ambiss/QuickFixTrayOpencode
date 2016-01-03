@@ -1,0 +1,22 @@
+<div class="engine-box-buy box-buy-hide">
+        
+    <label for="commandBoxBuy" class="command-box-buy">
+        <svg width="100%" height="100%" viewBox="0 0 306 306" version="1.1" 
+             xmlns="http://www.w3.org/2000/svg" 
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g transform="matrix(-0.999992,-0.00399643,0.00399643,-0.999992,305.387,306.61)">
+                <path d="M94.35,0L58.65,35.7L175.95,153L58.65,270.3L94.35,306L247.35,153L94.35,0Z"/>
+            </g>
+        </svg>
+    </label>
+    
+    <input type="checkbox" id="commandBoxBuy"><!-- command display box-buy -->
+    
+    <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
+            {{ productHelper.pricing() }} 
+            {{ productHelper.variants() }} 
+            {# {{ product.additional_information }} #}
+            {{ productHelper.form() }}    
+    </form>
+    
+</div> <!--/ engine-box-buy -->
