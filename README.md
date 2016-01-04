@@ -19,4 +19,4 @@ buyfloat - quickfix para caixa comprar flutuante;
 
 styles - quickfix de estilos peculiares para usar em situações especificas, como estilizar uma barra de scroll
 
-resources - quickfix de components prontos, nem sempre acompanhado de snippets html, mas com condições de melhorar o development utilizando, por exemplo, mixins padroes, assim como variables, melhoria na folha de estilo entre outros.
+resources > quickfix de components prontos, nem sempre acompanhado de snippets html, mas com condições de melhorar o development utilizando, por exemplo, mixins padroes, assim como variables, melhoria na folha de estilo entre outros.
