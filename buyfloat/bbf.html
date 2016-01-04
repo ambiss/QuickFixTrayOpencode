@@ -2,6 +2,14 @@
   - pode ser incorporado diretamente na view_product.html [pages/product.html]
   - poder ser isolado como snippet, bastando ser invocado na view_product.html [pages/product.html]
   - pode ser injetada pelo arquivo JS
+  
+  ELEMENTs:
+  engine-box-buy    - apenas o container que envolve o objeto
+  box-buy-hide      - serve como marcador para o JS e se responsabiliza por ocultar a box buy
+  commandBoxBuy     - identificador unico que permite ser acessado por meio de LABELs
+  box-buy-construct - estrutura formatada onde tem os elementos de exibicao, é a construcao do objeto como um todo
+  command-box-buy   - label com ponteiro para o identificador do input, isso marca ou desmarca o input
+  cbb               - label [secundario] com ponteiro para o identificador do input, isso marca ou desmarca o input
 -->
 
 <div class="engine-box-buy">
