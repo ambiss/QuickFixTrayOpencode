@@ -1,13 +1,16 @@
+
 .engine-box-buy {
     width: 190px;
     position: fixed;
     right: 0;
     
-    .command-box-buy {
+    .command-box-buy,
+    .cbb {
         width: 31px;
         height: 33px;
         
         position: absolute;
+        top: 42px;
         left: -26px;
         
         background-color: rgba(147, 14, 0, 1);
@@ -25,13 +28,64 @@
         
     } // command-box-buy
     
+    .cbb {
+        svg {
+            -ms-transform: rotate(0); 
+            -webkit-transform: rotate(0); 
+            transform: rotate(0);
+            
+            margin-left: 3px;
+        }
+        
+        display: none;
+    }
+    
+    #commandBoxBuy { position: absolute; left: -999em; }
+    #commandBoxBuy:checked ~ .box-buy-construct {
+        position: fixed;
+        right: -190px;
+        
+        @include transition();
+        
+    } // commandBoxBuy => `click`
+    
+    
+    #commandBoxBuy:checked ~ .box-buy-construct .command-box-buy {
+        display: none;
+        
+    } // commandBoxBuy => `click`
+    
+    #commandBoxBuy:checked ~ .box-buy-construct .cbb {
+        display: block;
+        
+    } // commandBoxBuy => `click`
+    
+    #commandBoxBuy:checked ~ .box-buy-construct .cbb.hide-label {
+        opacity: 0;
+        visibility: hidden;
+        
+    } // commandBoxBuy => `click`
+    
 }  //engine-box-buy
-
 
 .box-buy-hide {
     right: -230px;
     top: 6em;
     width: 190px;
+    
+    @include transition();
+    
+    .produto-formas-pagamento {
+        display: none; // apaga a frase `ver todas as formas de pagamento` e impede o acesso ao container delas 
+    }
+    
+    .cbb {
+        display: none;
+    }
+    
+} // box-buy-hide
+
+.box-buy-construct {
     padding-top: 10px;
     border-width: 1px 0px;
     border-style: solid none;
@@ -41,23 +95,25 @@
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     border-image: none;
+    top: 30px;
     
-    .produto-formas-pagamento {
-        display: none; // apaga a frase `ver todas as formas de pagamento` e impede o acesso ao container delas 
-    }
+    border: 1px solid #E5E5E5;
+    padding: 12px 10px;
+    box-shadow: 4px 3px 0px 0px rgba(0, 0, 0, 0.1);
     
-} // box-buy-hide
+    @include transition();
+}
 
 .box-buy-show {
-    transition: right 0.2s linear 0s;
+    @include transition();
     position: fixed;
     right: 20px;
     top: 30px;
     width: 190px;
     z-index: 9999;
-    background: #FFF none repeat scroll 0% 0%;
-    border: 1px solid #E5E5E5;
-    padding: 12px 10px;
-    box-shadow: 4px 3px 0px 0px rgba(0, 0, 0, 0.1);
-    
+    background: #fff none repeat scroll 0% 0%;
 } // box-buy-show
+
+.show-label {
+    display: block;
+}
