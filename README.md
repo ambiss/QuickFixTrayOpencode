@@ -10,7 +10,7 @@ Os arquivos são soluções isoladas e não tem dependencia de outros arquivos;
 
 setby_percent.html - quickfix que oferece exibição de ganhos de descontos em produto, baseado em (-) percent;
 
-gulpfile.js - roteamendo para criação de pastas no diretorio #####SASS
+gulpfile.js - roteamendo para criação de pastas no diretorio >SASS
 
 ### FOLDERS:
 headfix  - quickfix para topo fixo flutuante;
