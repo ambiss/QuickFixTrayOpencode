@@ -32,32 +32,34 @@
 		bottom: 9%;
 		
 		width: 265px;
-        
-        input[type="email"]  {
-            border: 0;
-            padding: .6em;
-            border-radius: 4px;
-
-            width: 100%;
-        }
-	}
+	
+		input[type="email"]  {
+		    border: 0;
+		    padding: .6em;
+		    border-radius: 4px;
+		
+		    width: 100%;
+		}
+		
+		button.news-button  {
+			background-color: #333;
+			border: 0;
+			
+			color: orange;
+			font-family: Helvetica, sans-serif;
+			font-weight: 300;
+			text-transform: none;
+			
+			display: block;
+			
+			margin: 10px auto 0;
+			padding: 1em 2.8em;
+			
+			text-align: center;
+		}
+   } // form
     
-    button.news-button  {
-		background-color: #333;
-		border: 0;
-		
-		color: orange;
-		font-family: Helvetica, sans-serif;
-		font-weight: 300;
-		text-transform: none;
-		
-		display: block;
-		
-		margin: 10px auto 0;
-		padding: 1em 2.8em;
-		
-		text-align: center;
-	}
+    
     
 } /* float-window */
 	 
