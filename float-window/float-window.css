@@ -1,0 +1,61 @@
+/* ----------------------------------------------------------
+		FLOAT WINDOW - Newsletter com css nativo
+----------------------------------------------------------- */
+.float-window {
+	background: url('../img/float_window.png') no-repeat 0 0;
+	
+	width: 520px;
+	height: 583px;
+	
+	margin: 0 auto 0;
+	
+	position: absolute;
+	left: calc(50% - 260px);
+	
+	z-index: 10;
+}
+	.float-window .close-window {
+	    padding: 14px;
+	    background: #FE8A97;
+	    cursor: pointer;
+	    float: right;
+	    font-size: 1.8em;
+	    font-weight: lighter;
+	    font-family: Helvetica;
+	    color: #9D0F0D;
+	    border: 1px solid #D8041B;
+	}
+	
+	.float-window form  {
+		position: absolute;
+		left: calc(50% - 130px);
+		bottom: 9%;
+		
+		width: 265px;
+	}
+	
+	.float-window form input[type="email"]  {
+		border: 0;
+		padding: .6em;
+		border-radius: 4px;
+		
+		width: 100%;
+	}
+	
+	.float-window form button.news-button  {
+		background-color: #010002;
+		border: 0;
+		border-radius: 5px;
+		
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		text-transform: none;
+		
+		display: block;
+		
+		margin: 10px auto 0;
+		padding: .8em 2.6em;
+		
+		text-align: center;
+	}
