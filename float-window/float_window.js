@@ -1,4 +1,4 @@
-// inserir na pasta modules que esta dentroa da pasta js
+// inserir na pasta modules que esta dentro da pasta js
 
 jQuery(document).ready(function(){
 
