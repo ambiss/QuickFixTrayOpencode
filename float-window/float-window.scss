@@ -1,0 +1,63 @@
+/* ----------------------------------------------------------
+		FLOAT WINDOW - Newsletter
+----------------------------------------------------------- */
+.float-window {
+	background: url('../img/background.png') no-repeat 0 0;
+	
+	width: 520px;
+	height: 583px;
+	
+	margin: 0 auto 0;
+	
+	position: absolute;
+	left: calc(50% - 260px); // usar mixin para centralizar como o mixin do reuse.scss -> ccX();
+	
+	z-index: 10;
+    
+    .close-window {
+	    padding: 14px;
+	    background: #333;
+	    cursor: pointer;
+	    float: right;
+	    font-size: 1.8em;
+	    font-weight: lighter;
+	    font-family: Helvetica;
+	    color: orange;
+	    border: 1px solid #D8041B;
+	}
+    
+    form  {
+		position: absolute;
+		left: calc(50% - 130px);
+		bottom: 9%;
+		
+		width: 265px;
+        
+        input[type="email"]  {
+            border: 0;
+            padding: .6em;
+            border-radius: 4px;
+
+            width: 100%;
+        }
+	}
+    
+    button.news-button  {
+		background-color: #333;
+		border: 0;
+		
+		color: orange;
+		font-family: Helvetica, sans-serif;
+		font-weight: 300;
+		text-transform: none;
+		
+		display: block;
+		
+		margin: 10px auto 0;
+		padding: 1em 2.8em;
+		
+		text-align: center;
+	}
+    
+} /* float-window */
+	 
