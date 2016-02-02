@@ -3,3 +3,30 @@
 
 <!-- aplica classe que reconhece a imagem do produto como sendo unica - seu faz sentido na page de produto -->
 <div class="slider-for {{ product.images|length }} {{ product.images|length == 1 ? 'solo-image' : '' }}">
+  
+<!-- recurso para usar botao de incrementar item para o carrinho - seu uso faz sentido na page de produto : -->
+<div class="btcomprar">
+    <div class="wrapper-quant">
+      <div data-app="product.quantity" id="quantidade">  
+        <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" />
+        <input type="button" id="plus" value='' onclick="process(1)" />
+        <input type="button" id="minus" value='' onclick="process(-1)">
+      </div>
+    </div>
+    {% if product.available %}
+    <div data-app="product.buy-button" id="bt_comprar" class="remove-bg" align="left">
+      <button class="botao-commerce botao-comprar" id="button-buy" type="submit">
+       {{ Image('buy') }}
+      </button>
+    </div>
+    <script type="text/javascript">
+      	function process(quant){
+    	    var value = parseInt(document.getElementById("quant").value);
+    	    value+=quant;
+    	    if (value >= 0) {
+    	        document.getElementById("quant").value = value;
+    	    }
+    	  }
+    </script>
+</div>
+<!-- end recurso para usar botao de incrementar ; -->
