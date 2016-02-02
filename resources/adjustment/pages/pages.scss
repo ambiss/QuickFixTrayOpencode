@@ -1,9 +1,9 @@
 .page-content {
     width: 70%;
-    @media screen and (max-width: 105em) { width: 80%; }
-    @media screen and (max-width: 90em)  { width: 95%; }
-    @media screen and (max-width: 86em) { width: 98%; }
-    @media screen and (max-width: 80em) { width: 99.6%; }
+    @media screen and (max-width: 105em) { width: 80%;  }
+    @media screen and (max-width: 90em)  { width: 95%;  }
+    @media screen and (max-width: 86em)  { width: 98%;  }
+    @media screen and (max-width: 80em)  { width: 99.6%;}
     
     margin: 0 auto 0;
 }
@@ -198,14 +198,14 @@
 	.page-search,
 	.page-catalog {
 	    
-	.product-item {
-	    float: none;
-	    display: inline-block;
-	}
-	
-	.container-catalog {
-	    text-align: center; 
-	}
+		.product-item {
+		    float: none;
+		    display: inline-block;
+		}
+		
+		.container-catalog {
+		    text-align: center; 
+		}
 	}
 }
 
