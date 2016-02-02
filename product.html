@@ -2,7 +2,7 @@
 <a href="{{ links.cart_add ~ product.id }}" class="addtocart"><i></i><span>Comprar</span></a>
 
 <!-- aplica classe que reconhece a imagem do produto como sendo unica - seu faz sentido na page de produto -->
-<div class="slider-for {{ product.images|length }} {{ product.images|length == 1 ? 'solo-image' : '' }}">
+<div class="slider-for {{ product.images|length }} {{ product.images|length == 1 ? 'solo-image' : 'mult-images' }}">
   
 <!-- recurso para usar botao de incrementar item para o carrinho - seu uso faz sentido na page de produto : -->
 <div class="btcomprar">
