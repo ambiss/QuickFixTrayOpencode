@@ -195,21 +195,19 @@
 
 @media screen and (max-width: 800px) { 
     
-    .page-search,
-        .page-catalog {
-            
-        .product-item {
-            float: none;
-            display: inline-block;
-        }
-        
-        .container-catalog {
-            text-align: center; 
-        }
-    }
+	.page-search,
+	.page-catalog {
+	    
+	.product-item {
+	    float: none;
+	    display: inline-block;
+	}
+	
+	.container-catalog {
+	    text-align: center; 
+	}
+	}
 }
-
-
 
 
 //:: Internal Pages
@@ -237,44 +235,21 @@
     #NavTagCloud{
         display: none;
     }
-
-    /*------------------------------------*\
-        RELATED
-    \*------------------------------------*/
-    #Relacionados{
-            
-        ul{
-            margin: 0;
-            padding: 0;
-            
-            li{
-                width: 100%;
-                
-                a,
-                h3,
-                span,
-                .NomeProdLista{
-                    text-align: center;
-                }
-            }
-        }
-    }
     
-    /*------------------------------------*\
-        PRODUCT
-    \*------------------------------------*/
+
+   // PAGE PRODUCT :
     .page-product{
         .Seguro {
             display: none!important;
         }
         #esquerda{
             float: none;
-            width: 100%;
+            width: 99.9%;
         }
         
         #direita{
             float: none;
-            width: 100%;
+            width: 99.9%;
         }
         
         #quantidade{
@@ -355,36 +330,35 @@
         }
     }
     
+    // end PAGE PRODUCT ;
     
-    /*------------------------------------*\
-        CART
-    \*------------------------------------*/
     
+    
+   // PAGE CHECKOUT :
     .caixa-produto {
-        padding-left: 2px !important;
-        padding-right: 2px !important;
+        padding-left: .2em !important;
+        padding-right: .2em !important;
     }
-    .page-checkout_cart{
+    .page-checkout_cart {
         
-        #ProdBlock,
-        .Seguro{
+        #ProdBlock, .Seguro {
             display: none !important;
         }
 
-        #tabela_carrinho{
+        #tabela_carrinho {
             
-            tr{
+            tr {
                 background: none;
-                border: 1px solid #ccc;
+                border: 1px solid #666;
                 
-                &:first-child{
+                &:first-child {
                     display: none;
                 }
             }
             
-            td{
-                border-right: 1px solid #ccc;
-                border-left: 1px solid #ccc;
+            td {
+                border-right: 1px solid #666;
+                border-left: 1px solid #666;
                 border-top: none;
                 border-bottom: none;
                 display: block;
@@ -394,29 +368,27 @@
                 text-align: center;
                 width: 100%;
                 
-                h3,
-                h4,
-                h5{
+                h3, h4, h5 {
                     margin: 0;
                 }
                 
-                h4{
-                    margin: 1em 0;
+                h4 {
+                    margin: 1rem 0;
                 }
                 
-                img{
+                img {
                     border: none;
                 }
                 
-                &:first-child{
+                &:first-child {
                     border-top: 1px solid #ccc;
                 }
                 
-                &:first-child + td{
+                &:first-child + td {
                     border-right: 1px solid #ccc;
                 }
                 
-                &:last-child{
+                &:last-child {
                     border-bottom: 1px solid #ccc;
                 }
             }
@@ -426,69 +398,69 @@
             margin: 10px auto 0;
         }
         
-        .bt-excluir{
+        .bt-excluir {
             height: 9px;
             margin: 1em auto;
             width: 10px;
         }
         
-        .caixa-forma-frete{
+        .caixa-forma-frete {
             
-            tr{
+            tr {
                 background: none;
                 display: block;
             }
             
-            th{
+            th {
                 display: block;
             }
             
-            td{
+            td {
                 display: block;
             }
             
-            .bt-cep{
-                display: block;
-                margin: 1em 0;
-            }
-            
-            .bt-cupom{
+            .bt-cep {
                 display: block;
                 margin: 1em 0;
             }
             
-            #calculoFrete{
+            .bt-cupom {
+                display: block;
+                margin: 1em 0;
+            }
+            
+            #calculoFrete {
                 float: none;
                 margin: 0;
                 text-align: center;
             }
         }
         
-        #formas_envio_frete{
+        #formas_envio_frete {
             
-            tr{
+            tr {
                 
-                td{
+                td {
                     padding: 0;
                     
-                    &:first-child + td{
+                    &:first-child + td {
                         width: auto;
                     }
                     
-                    &:first-child + td + td{
+                    &:first-child + td + td {
                         margin: 1em 0 3em;
                         width: 100%;
                     }
                 }
                 
-                img{ 
+                img { 
                     display: none;
                 }
             }
             
         }
         
-        .carFretePara{
+        .carFretePara {
             margin: 0;
             text-align: center;
         }
@@ -500,9 +472,9 @@
         padding: 0 0 0 10px;
     }
     
-    .carrinho-tabs{
+    .carrinho-tabs {
         
-        ol{
+        ol {
             display: block !important;
             margin: 0 0 14px;
         }
@@ -535,112 +507,53 @@
     .tablePage, table {
         margin: 22px 0 !important;
     }
+    // end PAGE CHECKOUT ;
     
-    /*------------------------------------*\
-        LOGIN
-    \*------------------------------------*/
-    .page-login{
+   
+    
+    // PAGE CATEGORY / PAGE SEARCH :
+    .page-catalog, .page-search {
         
-        .board{
-            
-            .caixa-login,
-            .caixa-cadastro{
-                border: none;
-                display: block;
-                float: none;
-                margin: 1em 0;
-                width: 100%;
-            }
-        }
-    }
-    
-    
-    /*------------------------------------*\
-        SIGN UP
-    \*------------------------------------*/
-    .page-register{
-        
-        #Page{
-            
-            .obriga{
-                display: block;
-                width: 100%;
-            }
-        }
-        
-        .breadcrumb{
-            margin-top: 2em;    
-        }
-        
-        .Mapa{
-            float: right;
-            margin: 2em 0;
-            position: static;
-        }
-    }
-    
-    
-    /*------------------------------------*\
-        IMPLANTATION
-    \*------------------------------------*/
-    .page-implantacao{
-        
-        input{
-            display: block;
-            margin-bottom: 1em;
-            width: 100%;
-        }
-    }
-    
-    
-    /*------------------------------------*\
-        CATALOG
-    \*------------------------------------*/
-    .page-catalog{
-        
-        .sidebar-left{
-             float: none;   
+        .sidebar-left,
+        .visual-type, .bts1, .compare-product a {
              display: none;
         }
         
-        .visual-type,
-        .bts1,
-        .compare-product a{
-            display: none;
-        }
-        
-         #Page label{
-             display: block;
-             margin: 0 5px;
+         #Page {
+         	label {
+				display: block;
+				margin: 0 .2em 0;
+         	}
          }
         
         .catalogo-form-filtros {
-            float: none;
-            width: 100% !important;
             display: block;
+            
+            float: none;
+            
+            width: 100% !important;
         }
         
-        .filtros{
+        .filtros {
             display: block;
             float: none;
             
-            select{
+            select {
                 display: block;
             }
         }
         
-        .breadcrumb{
+        .breadcrumb {
             margin: 0;
         }
         
-        #Page .select,
-        #Page select{
+        #Page .select, #Page select {
             width: 100%;
             display: block;
         }
         
         .catalogo-display {
-            margin: 10px 5px;
+            margin: .8em .2em .7em;
             text-align: center;
             width: 100%;
         }
@@ -652,201 +565,130 @@
         }
         
     }
-    
-    /*------------------------------------*\
-        SEARCH
-    \*------------------------------------*/
-    .page-search{
-        
-        .sidebar-left{
-             float: none;   
-             display: none;
-        }
-        
-        .visual-type,
-        .bts1,
-        .compare-product a{
-            display: none;
-        }
-        
-         #Page label{
-             display: block;
-             margin: 0 5px;
-         }
-        
-        .catalogo-form-filtros {
-            float: none;
-            width: 100% !important;
-            display: block;
-        }
-        
-        .filtros{
-            display: block;
-            float: none;
-            
-            select{
-                display: block;
-            }
-        }
-        
-        .breadcrumb{
-            margin: 0;
-        }
-        
-        #Page .select,
-        #Page select{
-            width: 100%;
-            display: block;
-        }
-        
-        .catalogo-display {
-            margin: 10px 5px;
-            text-align: center;
-            width: 100%;
-        }
-        
-        .catalogo-pagination .catalogo-pages, #linksPag {
-            font-size: 0;
-            width: 100%;
-            text-align: center;
-        }
-        
-    }
+    // end PAGE CATEGORY / PAGE SEARCH ;
     
     
-    /*------------------------------------*\
-        PAYMENT
-    \*------------------------------------*/
-    .page-checkout_payment{
+    
+    // CHECKOUT PAY
+    .page-checkout_payment {
         
-        .tablePage td{
+        .tablePage td {
             padding: 0 10px;
         }
         
-        .caixa-detalhes-compra{
+        .caixa-detalhes-compra {
             
-            tr{
+            tr {
                 
-                &:first-child{
+                &:first-child {
                     display: none;
                 }
             }
         }
         
-        .caixa-dados-entrega{
+        .caixa-dados-entrega {
             background: none;
             padding: 0;
             
-            td,
-            th{
-                display: block;
-                width: 100%;
+            td, th {
+                display: block; width: 100%;
             }
             
-            .tit-entrega,
-            .tit-cobranca,
-            .tit-trocar-entrega{
+            .tit-entrega, .tit-cobranca, .tit-trocar-entrega {
                 display: none;
             }
             
-            .bt-altera-entrega:before{
-                content: "Alterar Endere\00E7o de Entrega";
+            .bt-altera-entrega:before {
+                content: "Deseja mudar o endere\00E7o da entrega";
                 display: block;
             }
             
-            .tit-dados-entrega:before{
+            .tit-dados-entrega:before {
                 display: block;
-                content: "Endere\00E7o de Entrega";
+                content: "Endere\00E7o para entrega";
                 font-weight: 700;
-                margin-top: 1em;
+                margin-top: 1rem;
             }
             
-            .tit-dados-cobranca:before{
+            .tit-dados-cobranca:before {
                 display: block;
-                content: "Endere\00E7o de Cobranca";
+                content: "Endere\00E7o de cobranca";
                 font-weight: 700;
-                margin-top: 1em;
+                margin-top: 1rem;
             }
             
-            .bt-altera-entrega{
-                padding: 2em 0;
+            .bt-altera-entrega {
+                padding: 2.2rem 0;
             }
             
-            #form_pagamento h2{
+            #form_pagamento h2 {
                 padding: 0;
             }
         }
         
-        .caixa-formas-pagamento{
+        .caixa-formas-pagamento {
             display: none;
         }
         
-        .lista-formas-pagamento li{
+        .lista-formas-pagamento li {
             display: block;
             
-            > img{
+            > img {
                 width: 50px;
             }
             
-            .finalizarBT{
+            .finalizarBT {
                 display: block;
-                margin-top: 1em;
+                margin-top: 1.4em;
                 overflow: hidden;
                 position: static;
             }
         }
         
-        #Page legend{
-            font-size: 100%;
+        #Page legend {
+            font-size: 1.1rem;
             white-space: normal;
         }
         
-        #FormasPagamento fieldset{
+        #FormasPagamento fieldset {
             min-width: 0;
         }
         
-        #FormasPagamento .select{
+        #FormasPagamento .select {
             max-width: 100%;
         }
         
-        .caixa-lista-formas{
+        .caixa-lista-formas {
             
-            > .container{
-                margin-top: 2em;
+            > .container {
+                margin-top: 2rem;
             }
             
-            #ProdAbas li{
+            #ProdAbas li {
                 background: none;
-                padding: 1em 0;
+                padding: 1rem 0;
             }
         }
     }
+    // end CHECKOUT PAY ;
     
     
-    /*------------------------------------*\
-        FINISH SHOPPING
-    \*------------------------------------*/
+    
+    // FINISH BUY :
     .page-finalizar_finalizar{
         
-        .finish-message,
-        .finish-order,
-        .finish-purchase,
-        .finish-delivery{
+        .finish-message, .finish-order, .finish-purchase,
+        .finish-delivery {
             clear: both;
             float: none;
             width: 100%;
-            
-            -webkit-box-sizing: border-box !important;
-               -moz-box-sizing: border-box !important;
-                    box-sizing: border-box !important;
         }
     }
+    // end FINISH BUY ;
     
     
     
-    /*------------------------------------*\
-        FINISH SHOPPING
-    \*------------------------------------*/
+    // FINISH BUY by Logged USER :
     .page-central_cliente,
     .page-central_anteriores,
     .page-central_detalhe_pedido,
@@ -856,100 +698,95 @@
     .page-central_senha,
     .page-central_comentarios,
     .page-central_lista_espera,
-    .page-navegacao_visitados{
+    .page-navegacao_visitados {
         
-        #ProdBlock{
+        #ProdBlock,
+        .icoPai,
+        .sidebar-left {
             display: none;
         }
         
-        .sidebar-left{
-            display: none;
-        }
         
-        .icoPai{
-            display: none;
-        }
-        
-        .icoFilho{
-            border: none;
+        .icoFilho {
+            border: 0;
             width: 50%;
         }
         
-        .breadcrumb{
-            margin-top: 2em;    
+        .breadcrumb {
+            margin-top: 1.8rem;    
         }
         
-        .Mapa{
+        .Mapa {
             float: right;
-            margin: 2em 0;
+            margin: 2rem 0;
             position: static;
             display: none;
         }
         
-        .Pedidos,
-        .tablePage{
+        .Pedidos, .tablePage {
             
-            tr{
+            tr {
                 background: none;
                 display: block;
                 
-                &:first-child{
+                &:first-child {
                     display: none;   
                 }
             }
             
-            td{
+            td {
                 border: none;
-                border-left: 1px solid #000;
-                border-right: 1px solid #000;
+                border-left: 1px solid #333;
+                border-right: 1px solid #333;
                 display: block;
                 padding: 0;
                 text-align: center;
                 width: 100%;
                 
-                &:first-child{
-                    border-top: 1px solid #000;
-                    margin-top: 2em;
+                &:first-child {
+                    border-top: 1px solid #555;
+                    margin-top: 2rem;
                 }
                 
-                &:last-child{
-                    border-bottom: 1px solid #000;
+                &:last-child {
+                    border-bottom: 1px solid #333;
                 }
                 
-                h4{
+                h4 {
                     margin: 0;
                 }
             }
             
         }
         
-        #modificar_pagamento{
+        #modificar_pagamento 
             float: right;
-            margin-top: 1em;
-            margin-right: 1em;
+            margin-top: .8rem;
+            margin-right: .8rem;
         }
         
     }
     
-    .page-central_troca{
+    .page-central_troca {
         
-        .tablePage tr:first-child{
+        .tablePage tr:first-child {
             display: block;
         }
         
     }
+    // end FINISH BUY by Logged USER ;
     
-    /*------------------------------------*\
-        CONTACT
-    \*------------------------------------*/
     
+    
+    // PAGE CONTACT :
     .page-contact{
         
         .Mapa{
             display: none;
         }
         
-        #Page .text{
+        #Page .text {
             width: 100%;
         }
     }
+    // end PAGE CONTACT ;
