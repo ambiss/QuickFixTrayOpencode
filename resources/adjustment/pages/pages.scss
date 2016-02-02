@@ -1,0 +1,955 @@
+.page-content {
+    width: 70%;
+    @media screen and (max-width: 105em) { width: 80%; }
+    @media screen and (max-width: 90em)  { width: 95%; }
+    @media screen and (max-width: 86em) { width: 98%; }
+    @media screen and (max-width: 80em) { width: 99.6%; }
+    
+    margin: 0 auto 0;
+}
+
+
+.page-login {
+    text-align: left;
+    
+    
+    .titulo-login {
+        font-size: 0;
+        padding: 1.4rem;
+        
+        &:before {
+            content: '\00C1rea de Acesso';
+            
+            display:block;
+            
+            color: #9a1a1d;
+            
+            @include typo(1.5rem, 600, $roboto);
+        }
+        &:after {
+            content: 'Para acessar digite seu email e senha ou cadastre-se para criar uma conta';
+            
+            display:block;
+            
+            color: #666;
+            @include typo(.88rem, 600, $roboto);
+        }
+    }
+    
+    .caixa-cadastro,
+    .caixa-login {
+        text-align: left;
+        border-radius: 2px;
+        
+        margin: 1em;
+        @media screen and(max-width: 768px) { margin: 1em 0; }
+        
+        width: 46%;
+        @media screen and(max-width: 768px) { width: 100%; }
+        
+        background-color: #f8f8f8;
+        
+        form {
+            position: relative;
+            
+            p { 
+                position: static;
+            }    
+            
+            fieldset {
+                border: 0; padding: 0; margin: 0;
+            }
+            
+            label {
+                font-size: 0;
+                display: block;
+                float: left;
+                
+                width: 99%;
+                
+                input {
+                    padding: .8em;
+                    border: 0;
+                    border-radius: 2px;
+                    font-size: .9rem;
+                    
+                    @include placeholder {
+                        color: #333;
+                        font-size: .88rem;
+                    }
+                }
+            }
+            
+            button {
+                position: absolute;
+                right: 5.2%;
+            }
+            
+        }
+        
+        .login-campos-obrigatorios {
+            display: none;
+        }
+    
+    }
+    
+    .caixa-login {
+        button {
+            bottom: 2em;
+        }
+        .recuperar-senha {
+            clear: both;
+            
+            a {
+                color: #ce171e;
+                @include typo(1rem, 500, $roboto, 2);
+            }
+        }
+    }
+    
+    
+}
+
+.page-register {
+    .container2 {
+       padding: 10px; 
+    }
+
+}
+
+
+// Category and Search
+
+.page-search,
+.page-catalog {
+    
+    .container-catalog {
+        display: inline-block;
+        margin-top: 40px;
+    }
+    
+    .product-item {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .wrapper-breadcrumb {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+    
+    .breadcrumb {
+        font: 400 12px/12px $roboto;
+        padding: 0 10px 0;
+        margin-top: 17px;
+        float: left;
+    }
+    
+    .category-title {
+        font: 700 30px/30px $roboto;
+        color: #9a1a1d;
+        display: inline-block;
+    }
+    
+    .catalogo-form-filtros {
+        .filtros {
+            margin-right: 20px;
+        }
+    }
+    
+    .catalogo-display {
+        font: 400 12px/2px $roboto;
+        color: #666;
+        
+        strong.color {
+            color: #9a1a1d;
+        }
+    }
+    
+    .catalogo-pages {
+        span {
+            font: 400 12px/2px $roboto;
+            color: #666;
+            
+            a {
+                color: #9a1a1d;
+                text-decoration: none;
+            }
+        }
+        
+        .btn-proxima-pagina {
+            margin: 0 10px 0 10px;
+        }
+        
+        .btn-pagina-anterior {
+            margin: 0 10px 0 10px;
+        }
+    }
+    .container-filter {
+        border: 1px solid #f5f5f5;
+        padding: 11px 0 5px;
+        margin-bottom: 15px;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    
+    .page-search,
+        .page-catalog {
+            
+        .product-item {
+            float: none;
+            display: inline-block;
+        }
+        
+        .container-catalog {
+            text-align: center; 
+        }
+    }
+}
+
+
+
+
+//:: Internal Pages
+
+// Internal PAGES 
+@media screen and (max-width: 960px){
+    
+    body{   
+        min-width: 0;
+    }
+    
+    .center{
+        width: auto;
+    }
+    
+    #Page{
+        padding: 0;
+    }
+    
+    .Seguro{ 
+        position: static;
+    }
+    
+    #NavVisitados,
+    #NavTagCloud{
+        display: none;
+    }
+
+    /*------------------------------------*\
+        RELATED
+    \*------------------------------------*/
+    #Relacionados{
+            
+        ul{
+            margin: 0;
+            padding: 0;
+            
+            li{
+                width: 100%;
+                
+                a,
+                h3,
+                span,
+                .NomeProdLista{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+    /*------------------------------------*\
+        PRODUCT
+    \*------------------------------------*/
+    .page-product{
+        .Seguro {
+            display: none!important;
+        }
+        #esquerda{
+            float: none;
+            width: 100%;
+        }
+        
+        #direita{
+            float: none;
+            width: 100%;
+        }
+        
+        #quantidade{
+            float: none;
+        }
+        
+        .produto-links{
+            border: 1px solid #ccc;
+            
+            > span{
+                display: block;
+                border-top: 1px solid #ccc;
+                
+                &:first-child{
+                    border-top: none;
+                }
+            }
+        }
+        
+        #foto_p img{
+			max-width: 100% !important;
+		}
+        
+        .produto-esquerda{
+            
+            #comparar{
+                
+                input[type='checkbox']{
+                    display: inline-block;
+                    float: none;
+                    margin: 3px 5px 0 0;
+                    vertical-align: top;
+                }
+                
+                label{
+                    color: #000;
+                }
+            }
+        }
+        
+        .selo-ambiente-seguro{
+            display: none;
+        }
+        
+        .produto-nome{
+            margin: 0;
+        }
+        
+        .prodCod{
+            position: static;
+        }
+        
+        .board_htm table {
+			width: 100% !important;
+		}
+        
+        #ProdAbas{
+            margin: 0;
+            padding: 0;
+            
+            li{
+                display: block;
+                margin: 0;
+                
+                a{
+                    border-radius: 0;
+                }
+            }
+            
+            .aberta{
+                display: block;
+                margin: 0;
+                
+                a{
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    
+    
+    /*------------------------------------*\
+        CART
+    \*------------------------------------*/
+    
+    .caixa-produto {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+    .page-checkout_cart{
+        
+        #ProdBlock,
+        .Seguro{
+            display: none !important;
+        }
+
+        #tabela_carrinho{
+            
+            tr{
+                background: none;
+                border: 1px solid #ccc;
+                
+                &:first-child{
+                    display: none;
+                }
+            }
+            
+            td{
+                border-right: 1px solid #ccc;
+                border-left: 1px solid #ccc;
+                border-top: none;
+                border-bottom: none;
+                display: block;
+                margin: 0;
+                overflow: hidden;
+                padding: 0;
+                text-align: center;
+                width: 100%;
+                
+                h3,
+                h4,
+                h5{
+                    margin: 0;
+                }
+                
+                h4{
+                    margin: 1em 0;
+                }
+                
+                img{
+                    border: none;
+                }
+                
+                &:first-child{
+                    border-top: 1px solid #ccc;
+                }
+                
+                &:first-child + td{
+                    border-right: 1px solid #ccc;
+                }
+                
+                &:last-child{
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+        
+        .tablePage .refresh {
+            margin: 10px auto 0;
+        }
+        
+        .bt-excluir{
+            height: 9px;
+            margin: 1em auto;
+            width: 10px;
+        }
+        
+        .caixa-forma-frete{
+            
+            tr{
+                background: none;
+                display: block;
+            }
+            
+            th{
+                display: block;
+            }
+            
+            td{
+                display: block;
+            }
+            
+            .bt-cep{
+                display: block;
+                margin: 1em 0;
+            }
+            
+            .bt-cupom{
+                display: block;
+                margin: 1em 0;
+            }
+            
+            #calculoFrete{
+                float: none;
+                margin: 0;
+                text-align: center;
+            }
+        }
+        
+        #formas_envio_frete{
+            
+            tr{
+                
+                td{
+                    padding: 0;
+                    
+                    &:first-child + td{
+                        width: auto;
+                    }
+                    
+                    &:first-child + td + td{
+                        margin: 1em 0 3em;
+                        width: 100%;
+                    }
+                }
+                
+                img{ 
+                    display: none;
+                }
+            }
+            
+        }
+        
+        .carFretePara{
+            margin: 0;
+            text-align: center;
+        }
+    }
+    
+    .bt-avancar {
+        position: absolute;
+        right: 0;
+        padding: 0 0 0 10px;
+    }
+    
+    .carrinho-tabs{
+        
+        ol{
+            display: block !important;
+            margin: 0 0 14px;
+        }
+        
+        li{
+            display: block;
+            flex: none;
+            margin: 0 !important;
+        }
+        
+    }
+    .caixa-forma-frete .tablePage tr th {
+        background-color: transparent !important;
+    }
+    table tr:nth-child(even), .Pedidos tr:nth-child(odd) {
+        background: none !important;
+    }
+    #formas_envio_frete label {
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .bt-continuar-comprando {
+        height: 30px;
+        width: 144px;
+        margin-right: 31px;
+        background-color: #006bb2;
+        margin-bottom: 25px;
+        padding-top: 3px;
+    }
+    .tablePage, table {
+        margin: 22px 0 !important;
+    }
+    
+    /*------------------------------------*\
+        LOGIN
+    \*------------------------------------*/
+    .page-login{
+        
+        .board{
+            
+            .caixa-login,
+            .caixa-cadastro{
+                border: none;
+                display: block;
+                float: none;
+                margin: 1em 0;
+                width: 100%;
+            }
+        }
+    }
+    
+    
+    /*------------------------------------*\
+        SIGN UP
+    \*------------------------------------*/
+    .page-register{
+        
+        #Page{
+            
+            .obriga{
+                display: block;
+                width: 100%;
+            }
+        }
+        
+        .breadcrumb{
+            margin-top: 2em;    
+        }
+        
+        .Mapa{
+            float: right;
+            margin: 2em 0;
+            position: static;
+        }
+    }
+    
+    
+    /*------------------------------------*\
+        IMPLANTATION
+    \*------------------------------------*/
+    .page-implantacao{
+        
+        input{
+            display: block;
+            margin-bottom: 1em;
+            width: 100%;
+        }
+    }
+    
+    
+    /*------------------------------------*\
+        CATALOG
+    \*------------------------------------*/
+    .page-catalog{
+        
+        .sidebar-left{
+             float: none;   
+             display: none;
+        }
+        
+        .visual-type,
+        .bts1,
+        .compare-product a{
+            display: none;
+        }
+        
+         #Page label{
+             display: block;
+             margin: 0 5px;
+         }
+        
+        .catalogo-form-filtros {
+            float: none;
+            width: 100% !important;
+            display: block;
+        }
+        
+        .filtros{
+            display: block;
+            float: none;
+            
+            select{
+                display: block;
+            }
+        }
+        
+        .breadcrumb{
+            margin: 0;
+        }
+        
+        #Page .select,
+        #Page select{
+            width: 100%;
+            display: block;
+        }
+        
+        .catalogo-display {
+            margin: 10px 5px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .catalogo-pagination .catalogo-pages, #linksPag {
+            font-size: 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+    }
+    
+    /*------------------------------------*\
+        SEARCH
+    \*------------------------------------*/
+    .page-search{
+        
+        .sidebar-left{
+             float: none;   
+             display: none;
+        }
+        
+        .visual-type,
+        .bts1,
+        .compare-product a{
+            display: none;
+        }
+        
+         #Page label{
+             display: block;
+             margin: 0 5px;
+         }
+        
+        .catalogo-form-filtros {
+            float: none;
+            width: 100% !important;
+            display: block;
+        }
+        
+        .filtros{
+            display: block;
+            float: none;
+            
+            select{
+                display: block;
+            }
+        }
+        
+        .breadcrumb{
+            margin: 0;
+        }
+        
+        #Page .select,
+        #Page select{
+            width: 100%;
+            display: block;
+        }
+        
+        .catalogo-display {
+            margin: 10px 5px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .catalogo-pagination .catalogo-pages, #linksPag {
+            font-size: 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+    }
+    
+    
+    /*------------------------------------*\
+        PAYMENT
+    \*------------------------------------*/
+    .page-checkout_payment{
+        
+        .tablePage td{
+            padding: 0 10px;
+        }
+        
+        .caixa-detalhes-compra{
+            
+            tr{
+                
+                &:first-child{
+                    display: none;
+                }
+            }
+        }
+        
+        .caixa-dados-entrega{
+            background: none;
+            padding: 0;
+            
+            td,
+            th{
+                display: block;
+                width: 100%;
+            }
+            
+            .tit-entrega,
+            .tit-cobranca,
+            .tit-trocar-entrega{
+                display: none;
+            }
+            
+            .bt-altera-entrega:before{
+                content: "Alterar Endere\00E7o de Entrega";
+                display: block;
+            }
+            
+            .tit-dados-entrega:before{
+                display: block;
+                content: "Endere\00E7o de Entrega";
+                font-weight: 700;
+                margin-top: 1em;
+            }
+            
+            .tit-dados-cobranca:before{
+                display: block;
+                content: "Endere\00E7o de Cobranca";
+                font-weight: 700;
+                margin-top: 1em;
+            }
+            
+            .bt-altera-entrega{
+                padding: 2em 0;
+            }
+            
+            #form_pagamento h2{
+                padding: 0;
+            }
+        }
+        
+        .caixa-formas-pagamento{
+            display: none;
+        }
+        
+        .lista-formas-pagamento li{
+            display: block;
+            
+            > img{
+                width: 50px;
+            }
+            
+            .finalizarBT{
+                display: block;
+                margin-top: 1em;
+                overflow: hidden;
+                position: static;
+            }
+        }
+        
+        #Page legend{
+            font-size: 100%;
+            white-space: normal;
+        }
+        
+        #FormasPagamento fieldset{
+            min-width: 0;
+        }
+        
+        #FormasPagamento .select{
+            max-width: 100%;
+        }
+        
+        .caixa-lista-formas{
+            
+            > .container{
+                margin-top: 2em;
+            }
+            
+            #ProdAbas li{
+                background: none;
+                padding: 1em 0;
+            }
+        }
+    }
+    
+    
+    /*------------------------------------*\
+        FINISH SHOPPING
+    \*------------------------------------*/
+    .page-finalizar_finalizar{
+        
+        .finish-message,
+        .finish-order,
+        .finish-purchase,
+        .finish-delivery{
+            clear: both;
+            float: none;
+            width: 100%;
+            
+            -webkit-box-sizing: border-box !important;
+               -moz-box-sizing: border-box !important;
+                    box-sizing: border-box !important;
+        }
+    }
+    
+    
+    
+    /*------------------------------------*\
+        FINISH SHOPPING
+    \*------------------------------------*/
+    .page-central_cliente,
+    .page-central_anteriores,
+    .page-central_detalhe_pedido,
+    .page-central_confirmar_pagamento,
+    .page-central_rastrear,
+    .page-central_troca,
+    .page-central_senha,
+    .page-central_comentarios,
+    .page-central_lista_espera,
+    .page-navegacao_visitados{
+        
+        #ProdBlock{
+            display: none;
+        }
+        
+        .sidebar-left{
+            display: none;
+        }
+        
+        .icoPai{
+            display: none;
+        }
+        
+        .icoFilho{
+            border: none;
+            width: 50%;
+        }
+        
+        .breadcrumb{
+            margin-top: 2em;    
+        }
+        
+        .Mapa{
+            float: right;
+            margin: 2em 0;
+            position: static;
+            display: none;
+        }
+        
+        .Pedidos,
+        .tablePage{
+            
+            tr{
+                background: none;
+                display: block;
+                
+                &:first-child{
+                    display: none;   
+                }
+            }
+            
+            td{
+                border: none;
+                border-left: 1px solid #000;
+                border-right: 1px solid #000;
+                display: block;
+                padding: 0;
+                text-align: center;
+                width: 100%;
+                
+                &:first-child{
+                    border-top: 1px solid #000;
+                    margin-top: 2em;
+                }
+                
+                &:last-child{
+                    border-bottom: 1px solid #000;
+                }
+                
+                h4{
+                    margin: 0;
+                }
+            }
+            
+        }
+        
+        #modificar_pagamento{
+            float: right;
+            margin-top: 1em;
+            margin-right: 1em;
+        }
+        
+    }
+    
+    .page-central_troca{
+        
+        .tablePage tr:first-child{
+            display: block;
+        }
+        
+    }
+    
+    /*------------------------------------*\
+        CONTACT
+    \*------------------------------------*/
+    
+    .page-contact{
+        
+        .Mapa{
+            display: none;
+        }
+        
+        #Page .text{
+            width: 100%;
+        }
+    }
