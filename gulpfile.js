@@ -38,6 +38,13 @@ gulp.task('plugins', function(){
 });
 
 // watchers
+var cssWatcher = gulp.watch('**/*.scss', ['sass']);
+cssWatcher.on("change", function(event) {
+  SASSPATH = path.resolve(event.path, "../");
+  CSSPATH  = path.resolve(event.path, "../../");
+});
+
+// este watcher é para criar pastas no diretorio sass
 var cssWatcher = gulp.watch('**/*/*.scss', ['sass']);
 cssWatcher.on("change", function(event) {
   SASSPATH = path.resolve(event.path, "../../");
