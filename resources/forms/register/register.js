@@ -13,8 +13,8 @@ jQuery('#cnpj').prop('type', 'tel');
 jQuery('#pf_cpf_cliente').prop('type', 'tel');
 jQuery('#pj_cpf_cliente').prop('type', 'tel');
 
-jQuery('#pf_data_nascimento').prop('type', 'date');
-jQuery('#pj_data_nascimento').prop('type', 'date');
+//jQuery('#pf_data_nascimento').prop('type', 'date');
+//jQuery('#pj_data_nascimento').prop('type', 'date'); -> depreciou devido a problemas com sistema de validacao da tray
 
 jQuery('#telefone_cliente').prop('type', 'tel');
 jQuery('#telefone_cliente_2').prop('type', 'tel');
