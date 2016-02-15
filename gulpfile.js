@@ -51,6 +51,13 @@ cssWatcher.on("change", function(event) {
   CSSPATH  = path.resolve(event.path, "../../../");
 });
 
+// este watcher é para criar mais um nivel de pastas no diretorio sass
+var cssWatcher = gulp.watch('**/*/*/*.scss', ['sass']);
+cssWatcher.on("change", function(event) {
+  SASSPATH = path.resolve(event.path, "../../../");
+  CSSPATH  = path.resolve(event.path, "../../../../");
+});
+
 var jsWatcher = gulp.watch('**/js/modules/*.js', ['js']);
 jsWatcher.on("change", function(event) {
   JSPATH = path.resolve(event.path, "../");
