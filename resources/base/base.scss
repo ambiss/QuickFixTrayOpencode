@@ -24,7 +24,7 @@ html, body {
 
 
 // resize wrapper and centralization : 
-.res {
+.wrapper {
     width: 68.9%;
 } // 1680 ~ 1919
 
@@ -32,7 +32,7 @@ html, body {
     margin: 0 auto 0;
 }
 
-.res-cc {
+.wrapper-cc {
     width: 68.9%;
     margin: 0 auto 0;
 } // 1680 ~ 1919
@@ -86,7 +86,7 @@ img {
     html, body {
         font-size: 24px;
     }
-    .res {
+    .wrapper {
         width: 76%;
     }
 } // 7680 -> 8k
@@ -96,7 +96,7 @@ img {
     html, body {
         font-size: 22px;
     }
-    .res {
+    .wrapper {
         width: 86%;
     }
 } // 5120 -> iMac 5k
@@ -106,7 +106,7 @@ img {
     html, body {
         font-size: 18px;
     }
-    .res {
+    .wrapper {
         width: 80%;
     }
 } // 2560 -> UltraWide
@@ -116,7 +116,7 @@ img {
     html, body {
         font-size: 16.6px;
     }
-    .res {
+    .wrapper {
         width: 78%;
     }
 } // 1920 =< - Desktop
@@ -126,7 +126,7 @@ img {
     html, body {
         font-size: 16px;
     }
-    .res {
+    .wrapper {
         width: 90%;
     }
 } // 1388 =< - Desktop
@@ -136,7 +136,7 @@ img {
     html, body {
         font-size: 15.6px;
     }
-    .res {
+    .wrapper {
         width: 98%;
     }
 } // 1024 =< - Desktop
