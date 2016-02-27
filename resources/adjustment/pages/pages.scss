@@ -23,7 +23,7 @@
             
             color: #9a1a1d;
             
-            @include typo(1.5rem, 600, $roboto);
+            @include font(1.5rem, 600, $helvetica);
         }
         &:after {
             content: 'Para acessar digite seu email e senha ou cadastre-se para criar uma conta';
@@ -31,7 +31,7 @@
             display:block;
             
             color: #666;
-            @include typo(.88rem, 600, $roboto);
+            @include font(.88rem, 600, $roboto);
         }
     }
     
@@ -46,7 +46,7 @@
         width: 46%;
         @media screen and(max-width: 768px) { width: 100%; }
         
-        background-color: #f8f8f8;
+        background-color: #eee;
         
         form {
             position: relative;
@@ -71,12 +71,14 @@
                     border: 0;
                     border-radius: 2px;
                     font-size: .9rem;
+                    border: 1px solid #d9d9d9;
                     
                     @include placeholder {
                         color: #333;
                         font-size: .88rem;
                     }
                 }
+                
             }
             
             button {
@@ -84,6 +86,11 @@
                 right: 5.2%;
             }
             
+        }
+        
+        .campo-email input#email_cadastro {
+            width: 70% !important;
+            @media screen and (max-width: 51em) { width: 56%; }
         }
         
         .login-campos-obrigatorios {
@@ -101,7 +108,7 @@
             
             a {
                 color: #ce171e;
-                @include typo(1rem, 500, $roboto, 2);
+                @include font(1rem, 500, $roboto, 2);
             }
         }
     }
@@ -212,7 +219,7 @@
 //:: Internal Pages
 
 // Internal PAGES 
-@media screen and (max-width: 60em){
+@media screen and (max-width: 960px) {
     
     body{   
         min-width: 0;
@@ -788,5 +795,5 @@
             width: 100%;
         }
     }
-} // end 60em
+}
     // end PAGE CONTACT ;
