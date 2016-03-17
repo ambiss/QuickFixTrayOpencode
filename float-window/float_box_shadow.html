@@ -1,0 +1,12 @@
+<div class="effects-shadow" style="display: none;"></div>
+<div class="float-window" style="display: none;">
+    <span class="close-window">fechar a janela</span>
+    <form action="{{ links.newsletter }}" method="post">
+        <input type="hidden" name="loja" value="{{ store.id }}">
+        
+        <input name="name" type="text" placeholder="seu nome:">
+        <input name="email" type="email" placeholder="seu endere&ccedil;o de email">
+        
+        <button class="btn-light-window">Cadastrar</button>
+    </form>
+</div>
