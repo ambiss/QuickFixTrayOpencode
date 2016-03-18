@@ -26,7 +26,9 @@ $footer: rgba(232, 229, 219, 1);
 
 @mixin display($display: inline-block, $va: top) {
     display: $display;
-    vertical-align: $va;
+    @if $display != block and $display != table {
+        vertical-align: $va;
+    }
 }
 
 @mixin transition($property: all, $duration: 0.3s, $effect: ease-in-out) {
@@ -94,6 +96,18 @@ $footer: rgba(232, 229, 219, 1);
 }
 @mixin transparent($c: transparent) {
     background-color: $c;
+}
+
+@mixin backreplace($path, $width: auto, $height: auto, $imgRpl: false) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    width: $width;
+    height: $height;
+    
+    @if $imgRpl == true {
+        text-indent: -999em;
+    }
+    
 }
 //end ---------- Backgrounds ; ----
 
