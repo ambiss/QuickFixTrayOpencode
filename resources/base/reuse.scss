@@ -156,6 +156,41 @@ $footer: rgba(232, 229, 219, 1);
 }
 //end ---------- Borders ; ----
 
+@mixin arrow($color: #333, $size: 8px, $dir: bottom, $content: false) {
+    // valida se vai querer pseudo elemento :before ou :after
+    @if $content == true or $content == content {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    // valida a direcao do ponteiro, podendo ser top, bottom, right, left
+    @if $dir == top {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    }
+    
+    @else if $dir == bottom {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    }
+    
+    @else if $dir == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+    }
+    
+    @else {
+        border-top: $size solid transparent;
+        border-left: $size solid $color;
+        border-bottom: $size solid transparent;
+    }
+    
+}
+
 // end Mixins;
 
 // ----
