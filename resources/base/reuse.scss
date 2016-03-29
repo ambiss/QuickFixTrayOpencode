@@ -83,6 +83,32 @@ $footer: rgba(232, 229, 219, 1);
     line-height: $line-height;
 }
 
+// Mixin texts
+// align texts
+@mixin t($type: center) {
+    @if $type == center {
+        text-align: center;
+    }
+    @if $type == left {
+        text-align: left;
+    }
+    @if $type == right {
+        text-align: right;
+    }
+    @if $type == justify {
+        text-align: justify;
+    }
+    @if $type == uppercase {
+        text-transform: uppercase;
+    }
+    @if $type == lowercase {
+        text-transform: lowercase;
+    }
+    @if $type == captalize {
+        text-transform: captalize;
+    }
+}
+
 // Mixins Decorates
 //:----------- Backgroundns : ----
 @mixin back($path, $color: transparent, $repeat: no-repeat, $position: 0 0) {
