@@ -104,8 +104,8 @@ $footer: rgba(232, 229, 219, 1);
     @if $type == lowercase {
         text-transform: lowercase;
     }
-    @if $type == captalize {
-        text-transform: captalize;
+    @if $type == capitalize {
+        text-transform: capitalize;
     }
     
     @if $type == none {
