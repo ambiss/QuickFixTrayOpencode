@@ -107,6 +107,22 @@ $footer: rgba(232, 229, 219, 1);
     @if $type == captalize {
         text-transform: captalize;
     }
+    
+    @if $type == none {
+    	text-decoration: none;
+    }
+    
+    @if $type == underline {
+    	text-decoration: underline;
+    }
+    
+    @if $type == overline {
+    	text-decoration: overline;
+    }
+    
+    @if $type == line-through {
+    	text-decoration: line-through;
+    }
 }
 //end -------- aligns texts ; ----
 
