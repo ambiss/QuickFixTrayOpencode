@@ -83,6 +83,44 @@ $footer: rgba(232, 229, 219, 1);
     line-height: $line-height;
 }
 
+
+// Mixins -- Size -- Adjustment -- Position
+//:------------ Size : ----
+@mixin size($width: auto, $height: auto, $type:false) {
+    @if $type == minw {
+        min-width: $width;
+        height: $height;
+        
+    } @else if $type == minh {
+        width: $width;
+        min-height: $height;
+        
+    } @else if $type == minwh {
+        min-width: $width;
+        min-height: $height;
+        
+    } @else {
+        width: $width;
+        height: $height;    
+    }
+}
+//end -------- aligns texts ; ----
+
+@mixin sizeExtend($width: inherit, $height: inherit) {
+    width: $width;
+    height: $height;
+}
+
+@mixin margin($arg, $auto: false) {
+    @if $auto == true or $auto == auto {
+        margin: 0 auto 0;
+    }@else {
+        margin: $arg;
+    }
+}
+
+
+
 // Mixin texts :
 //:---------- align texts : ---
 @mixin t($type: center) {
