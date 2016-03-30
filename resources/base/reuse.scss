@@ -107,20 +107,19 @@ $footer: rgba(232, 229, 219, 1);
     @if $type == capitalize {
         text-transform: capitalize;
     }
-    
     @if $type == none {
     	text-decoration: none;
     }
-    
     @if $type == underline {
     	text-decoration: underline;
     }
-    
     @if $type == overline {
     	text-decoration: overline;
     }
-    
-    @if $type == line-through {
+    @if $type == nowrap {
+    	white-space: $type;
+    }
+    @if $type == line-through or $type == depor or $type == de-por or $type == oferta or $type == offer {
     	text-decoration: line-through;
     }
 }
