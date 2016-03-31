@@ -111,26 +111,23 @@ $footer: rgba(232, 229, 219, 1);
 }
 
 @mixin z($layer: 20, $set: false) {
-    z-index : $layer;
     
-    @if $layer == full or $layer == max or $layer == maximo {
+    @if $layer == quite {
+        z-index: 9999;
+    } @else if $layer == full or $layer == max or $layer == maximo {
         z-index: 999;
-    }
-    @if $layer == medium or $layer == medio {
+    } @else if $layer == medium or $layer == medio {
         z-index: 99;
-    }
-    @if $layer == bit or $layer == pouco {
+    } @else if $layer == bit or $layer == pouco {
         z-index: 10;
-    }
-    
-    @if $set == set or $set == relative or $set == true {
+    } @else if $set == set or $set == relative or $set == true {
         position: relative;
-    }
-    @if $set == absolute {
+    } @else if $set == absolute {
         position: absolute;
+    } @else {
+        z-index : $layer;
     }
 }
-
 //end -------- Size ; ----
 
 
