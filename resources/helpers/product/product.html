@@ -1,6 +1,11 @@
 <!-- esta pagina nao tem marcacao estruturada, apenas uma div para conter os helpers -->
 <div>
-
+  {# Monta imagem com galeria em thumbnails #}
+  {# Necesario id 'visualBlock' para poder usar variacao de cores #}
+  <div id="visualBlock">
+    {{ productHelper.gallery() }}
+  </div>
+  
   {# Compre Junto #}
   {{ productHelper.bundle() }}
   
