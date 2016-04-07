@@ -1,0 +1,25 @@
+.alldep {
+        color: #fdb831;
+        @include font(.875rem, 600, $main);
+        
+        > h4 {
+            color: inherit;
+            @include font(inherit, inherit, inherit);
+            @include display();
+        }
+        
+        &.has-click {
+            .tablet-block-alldep {
+                opacity: 1;
+                visibility: visible;
+            }
+        } // necessario para tablets
+        
+        &:hover {
+            .block-alldep {
+                opacity: 1;
+                visibility: visible;
+            }
+        } // desktop/laptop
+        
+    }
