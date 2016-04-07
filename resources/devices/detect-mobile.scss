@@ -1,25 +1,46 @@
 .alldep {
-        color: #fdb831;
-        @include font(.875rem, 600, $main);
-        
-        > h4 {
-            color: inherit;
-            @include font(inherit, inherit, inherit);
-            @include display();
-        }
-        
-        &.has-click {
-            .tablet-block-alldep {
-                opacity: 1;
-                visibility: visible;
-            }
-        } // necessario para tablets
-        
-        &:hover {
-            .block-alldep {
-                opacity: 1;
-                visibility: visible;
-            }
-        } // desktop/laptop
-        
+    color: #fdb831;
+    @include font(.875rem, 600, $main);
+    
+    > h4 {
+        color: inherit;
+        @include font(inherit, inherit, inherit);
+        @include display();
     }
+    
+    &.has-click {
+        .tablet-block-alldep {
+            opacity: 1;
+            visibility: visible;
+        }
+    } // necessario para tablets
+    
+    &:hover {
+        .block-alldep {
+            opacity: 1;
+            visibility: visible;
+        }
+    } // desktop/laptop
+
+}
+
+
+.block-alldep,
+.tablet-block-alldep {
+    background-color: rgba(255, 255, 255, 1);
+    @include border(#e1e1e1);
+    border-top: 2px solid #fdb831;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    
+    padding: 1.9rem;
+    width: 100%; 
+    
+    @include transition();
+    
+    opacity: 0;
+    visibility: hidden;
+}
