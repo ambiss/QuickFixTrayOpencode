@@ -1,0 +1,25 @@
+.suggestion {
+    border: 6px solid #074366;
+    
+    .suggestion-products {
+        background: #fff;
+    }
+    
+    .suggestion-words strong, .suggestion-products strong {
+        background: #074366;
+    }
+    
+    .suggestion-product {
+        &:hover {
+            background: none;
+        }
+    }
+    
+    span {
+        @include typo(.79rem, 500, $font1, 1.15);
+        
+        &.titlep {
+            @include typo(.79rem, 500, $font1, 1.15);    
+        }
+    }
+}
