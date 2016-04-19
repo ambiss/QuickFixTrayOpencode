@@ -1,0 +1,41 @@
+@media screen and (max-width: 690px) {
+    .modal-body {
+        width: 310px;
+        padding: 8px;
+        
+        #Page {
+            display: block !important;
+            width: 320px !important;
+            
+            form {
+                label {
+                    display: block;
+                    width: 99%;
+                }
+                fieldset {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    
+                    input {
+                        width: 98%;
+                    }
+                    
+                    .textarea {
+                        width: 98%;
+                    }
+                    
+                    button {
+                        &.image {
+                            float: left;
+                        }
+                    }
+                }
+                
+            } // form
+            
+        } //Page 
+        
+    } // modal-body 
+    
+} // media
