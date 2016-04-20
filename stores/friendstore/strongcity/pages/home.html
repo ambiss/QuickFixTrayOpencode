@@ -1,0 +1,14 @@
+{% if banner.showcase %}
+    <div class="banner banner-showcase">
+        {{ banner.showcase }}
+    </div>
+{% endif %}
+
+{% set products = Products({
+    'filter': 'featured'
+}) %}
+
+{% element 'snippets/showcase' {
+    "showcaseTitle": "Destaques",
+    "products": products
+} %}

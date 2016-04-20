@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-br" data-store="{{ store.id }}" class="page-{{ pages.current }}">
+<head>
+    {{ html.charset() }}
+    {{ tray.meta }}
+    <!-- [if IE]<meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ tray.styles }}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700">
+    <link rel="stylesheet" href="{{ asset('css/theme.min.css') }}">
+    {{ tray.scripts }}
+    {{ tray.analytics }}
+    {{ googleTagManager.header(pages.current, tagManagerData) }}
+
+    {% if utils.is_mobile %}
+        <link rel="stylesheet" href="//images.tcdn.com.br/img/arquivos/identidade_visual/css/sistema.css?{{ utils.assets_version }}">  
+        <link rel="stylesheet" href="//images.tcdn.com.br/img/arquivos/mobile/css/open-mobilev2.css?{{ utils.assets_version }}">
+        <script src="//images.tcdn.com.br/img/arquivos/mobile/scripts/open-mobilev2.js?{{ utils.assets_version }}"></script>
+    {% endif %}
+</head>
+<body>
+    {{ googleTagManager.top(pages.current, tagManagerData) }}
+        
+    {% if utils.is_mobile %}
+        {% element 'mobile/header' %}
+    {% else %}
+        {% element 'header' %}
+    {% endif %}
+
+    {% if pages.current == 'home' and banner.home %}
+        <div class="banner banner-home">
+            {{ banner.home }}
+        </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="content row">
+
+            {% element 'sidebar_left' %}
+
+            <section class="page-content col-sm-8">
+                {{ content_for_layout }}
+            </section>
+
+            {% element 'sidebar_right' %}
+
+        </div>
+    </div>
+    
+    {% element 'snippets/tagcloud' %}
+    {% element 'snippets/history' %}
+
+    {% if banner.bottom %}
+        <div class="banner banner-bottom">
+            {{ banner.bottom }}
+        </div>
+    {% endif %}
+
+    {% if utils.is_mobile %}
+        {% element 'mobile/footer' %}
+    {% else %}
+        {% element 'footer' %}
+    {% endif %}
+
+    {% if banner.footer %}
+        <div class="banner banner-footer">
+            {{ banner.footer }}
+        </div>
+    {% endif %}
+
+    {% if pages.current == 'home' %}
+        {{ banner.popup ~ banner.floating }}
+    {% endif %}
+
+    {% element 'snippets/credits' %}
+
+    {% element 'snippets/modal' %}
+
+    {{ googleTagManager.bottom(pages.current, tagManagerData) }}
+
+    {{ html.script('dist/application.min.js?' ~ utils.assets_version) }}
+
+    {% element 'snippets/pageview' %}
+
+</body>
+</html>
