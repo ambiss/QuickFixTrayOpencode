@@ -26,6 +26,7 @@ var isDevice = {
 };
     
 if(isDevice.tablet()) {
+    jQuery('body').addClass('_istablet'); // insere classe tablet no elemento body para fins de estilo especifico
     jQuery('#cmdAllDep').removeClass('block-alldep').addClass('tablet-block-alldep'); // desliga o :hover dos tablets do alldep e permite o uso do hasclick
     jQuery('.list-category section .subnivel').hide(); // desliga o :hover dos tablets
     
