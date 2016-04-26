@@ -1,0 +1,208 @@
+.bundle {
+    $cfontsec: #8b8b8b; // cor font secundaria - tonalidade cinza
+    $cfeat: #006cb3;  // cor font destaque - tonalidade azul
+    $ctitle: #2b2c2e; // cor font titulo
+    $cdivisor: #f1f1f1; // cor divisor geralmente usado em pseudo elementos :after e :before
+    $cfeatalter: #fabb27; // cor `destaque alternativo` para destacar a soma, o sinal de igual e a cor da font do botao
+    
+    #ProdBlockCompreJunto {
+        margin-bottom: 0;
+        
+        .plus {
+           &.color {
+                background-color: $cfeatalter;
+                border-radius: 50%;
+                color: #fff;
+                @include typo(1.6rem, 400, $font2);
+                
+                padding: 4px;
+                @include size(34px, 34px);
+           }
+        } // plus
+        
+        #ProdAbas {
+            border: 0;
+            
+            ul {
+                @extend #ProdAbas;
+                margin: 0;
+                padding: 0;
+                
+                li {
+                    &.aberta {
+                        a {
+                            border: 0;
+                            color: $ctitle !important;
+                            @include typo(1.4rem, 700, $font1, 1.4);
+                        }
+                    }
+                    
+                } // li
+            } // ul
+            
+        } // ProdAbas
+        
+        .prodBox {
+            
+            .compreJunto {
+                &> {
+                    li {
+                        border: 0;
+                        margin-bottom: 44px;
+                    }
+                }
+            }
+            margin-bottom: 60px;
+            
+            .fotosCompreJunto {
+                width: 55.9%;
+                
+                .produto {
+                    position: relative;
+                    
+                    .unidades_topo {
+                        font-size: 0;
+                    }
+                    
+                    &:first-child {
+                        
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: -28px;
+                            right: -18px;
+                            z-index: -1;
+                            
+                            background-color: $cdivisor;
+                            width: 1px;
+                            height: 130%;
+                        }
+                        
+                    }
+                }
+            } //fotosCompreJunto
+            
+            .precoCompreJunto {
+                border: 0;
+                
+                color: #202020;
+                font-family: $font1;
+                
+                padding-left: 36px;
+                
+                width: 42.9%;
+                
+                position: relative;
+                
+                &:before {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: $cdivisor;
+                }
+                &:after {
+                    content: ' = ';
+                    
+                    position: absolute;
+                    left: -16px;
+                    top: calc(50% - 16px);
+                    
+                    border-radius: 50%;
+                    background-color: $cfeatalter;
+                    
+                    color: #fff;
+                    @include t(center);
+                    @include typo(1.6rem, 500, $font2);
+                    
+                    padding: 3.6px 0 0;
+                    
+                    width: 34px;
+                    height: 33.6px;
+                }
+                strong {
+                    span {
+                        color: $ctitle;
+                    }
+                } // numero que aparece antes do nome do produto
+                
+                span {
+                    color: $cfontsec;
+                }
+                
+                a {
+                    color: $cfontsec;
+                }
+                
+                .precosCompreJunto {
+                    ul {
+                        li {
+                            color: $cfontsec;
+                            font-size: .82rem;
+                            @include t(left);
+                            
+                            &.comprejunto_preco {   
+                            }
+                            
+                            &.comprejunto_botao {
+                                @include display();
+                            }
+                            &.comprejunto_economize {
+                                color: $cfontsec;
+                                font-size: 80%;
+                            }
+                            &.comprejunto_preco2 {
+                                color: $cfeat;
+                                font-size: .9rem;
+                                font-family: $font1;
+                                
+                                strong {
+                                    float: none;
+                                    
+                                    &.PrecoPrincipal {
+                                        color: $cfeat;
+                                        font-family: $font1;
+                                    }
+                                }
+                            }
+                            
+                            .botao-compre-junto {
+                                background: $cfeat;
+                                border-radius: 0;
+                                border: 0;
+                                
+                                color: $cfeatalter;
+                                
+                                width: 200px;
+                                height: 49px;
+                                
+                                span {
+                                    background: none; // caso queira eliminar o icone do carrinho que fica no botao
+                                    
+                                    color: $cfeatalter;
+                                    @include typo(1.2rem, 600, $font1);
+                                    
+                                    padding: 0;
+                                }
+                                
+                            } // botao-compre-junto
+                            
+                        } // li  
+                        
+                    } // ul 
+                    
+                } // precosCompreJunto - wrapper da <ul><li>
+                
+            } //precoCompreJunto
+            
+        } //prodBox
+        
+    } //ProdBlockCompreJunto 
+    
+    .varTit {
+        display: none;
+    }
+    
+} // bundle
