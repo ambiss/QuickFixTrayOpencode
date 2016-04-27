@@ -1,0 +1,40 @@
+._isdevice {
+    &.modal-open {
+        font-family:  $font1
+        ;
+        .page-product table {
+            width: 320px !important;
+        }
+        
+        #modal-content {
+            width: 320px !important;
+            
+            & > * {
+                width: 320px !important;
+            }
+            
+            .tablePage {
+                tbody {
+                    > tr {
+                        display: block;
+                        margin-top: 2px;
+                        padding-bottom: 10px;
+                        border: 0;
+                        
+                        th {
+                            padding-left: 0;
+                            font-family: inherit;
+                            font-size: 1rem;
+                        }
+                        
+                        td {
+                            font-family: inherit;
+                            display: block;
+                        }            
+                    }
+                }
+            }
+        }
+    } // modal-open
+    
+} // _isdevice
