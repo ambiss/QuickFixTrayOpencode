@@ -29,6 +29,21 @@ $footer: rgba(232, 229, 219, 1);
     @if $display != block and $display != table {
         vertical-align: $va;
     }
+    
+    @if $display == middle {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    @if $display == top {
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    @if $display == bottom {
+        display: inline-block;
+        vertical-align: bottom;
+    }
 }
 
 @mixin transition($property: all, $duration: 0.3s, $effect: ease-in-out) {
