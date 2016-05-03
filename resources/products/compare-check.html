@@ -1,0 +1,16 @@
+<!-- necessario css para stilizar o formato do checkbox -- compare.scc -->
+{% if pages.current == 'catalog' %}
+  <div class="compare-buttons">
+      {% set compareCSS = 'compare-hidden' %}
+
+      <a data-compare="remove" href="{{ links.compare_delete ~ product.id }}" class="{{ not product.compare ? compareCSS }}">
+          <span class="filter-checkbox checked"></span>
+          {{ Translation("remover_comparar") }}
+      </a>
+      
+      <a data-compare="add" href="{{ links.compare_add  ~ product.id }}" class="{{ product.compare ? compareCSS }}">
+          <span class="filter-checkbox"></span>
+          {{ Translation("comparar_produto") }}
+      </a>
+  </div>
+  {% endif %}
