@@ -1,0 +1,20 @@
+<section class="showall">
+    <span>Todas as categorias</span>
+    {% set myCategories = Categories({ "order": { "name": "asc" }}) %}
+      
+    <div class="departaments">
+    {% set first_letter = ' ' %}
+    {% for category in myCategories %}
+  
+        {% set primary = category.name|first %}
+      
+        {% if primary != first_letter %}
+          <b>{{ category.name|first }}</b>
+        {% endif %}
+          
+        {% set first_letter = primary %}
+        <a href="{{ category.link }}">{{ category.name }}</a>
+          
+    {% endfor %}
+    </div>
+</section>
