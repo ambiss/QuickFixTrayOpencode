@@ -1,0 +1,23 @@
+<div>
+  <!-- - De: -->
+  {% if customer.logged %}
+      <h4>Olá {{ customer.name }} | {{ customer.email }}</h4>
+  {% else %}
+      <h5><a href="{{ links.login }}">Login</a></h5>
+      <h5><a href="{{ links.sign_in }}">Crie sua conta</a></h5>
+  {% endif %}
+
+
+  <!-- - Para: -->
+  <span class="tray-hide" data-logged-user="true">
+      <li>Olá <span data-customer="name"></span></li>
+      <li><a href="{{ links.logout }}">sair</a></li>
+  </span>
+  <span class="tray-hide" data-logged-user="false">
+      <li>
+          <a href="{{ links.login }}">Login</a> |
+          <a href="{{ links.sign_in }}">Crie sua conta</a>
+      </li>
+  </span>
+</div>
+
