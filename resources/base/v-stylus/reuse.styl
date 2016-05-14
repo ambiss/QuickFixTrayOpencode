@@ -27,19 +27,17 @@ placeholder()
 
 display(display=inline-block, va=top) 
     display display
+    
     if display != block and display != table 
         vertical-align va
-    
     
     if display == middle 
         display inline-block
         vertical-align middle
     
-    
     if display == top 
         display inline-block
         vertical-align top
-    
     
     if display == bottom 
         display inline-block
@@ -57,8 +55,6 @@ display(display=inline-block, va=top)
         display block
         margin 0 auto 0
     
-
-
 transition(property=all, duration=0.3s, effect=ease-in-out) 
 	-webkit-transition property duration effect
 	-moz-transition property duration effect
@@ -71,13 +67,11 @@ user-select(value=none)
     -ms-user-select value     
     user-select value  
 
-
 ccX(value=-50%) 
     -webkit-transform translateX(value)
     -moz-transform translateX(value)
     -ms-transform translateX(value)
     transform translateX(value)
-
 
 ccY(value=-50%) 
     -webkit-transform translateY(value)
@@ -103,13 +97,11 @@ tX(value=100%)
     -ms-transform translateX(value)
     transform translateX(value)
 
-
 font(size=12px, weight=400, family=helvetica, line-height=1.1) 
     font-size size
     font-weight weight
     font-family family
     line-height line-height
-
 
 
 // Mixins -- Size -- Adjustment -- Position
@@ -131,12 +123,9 @@ size(width=auto, height=auto, type=false)
         width width
         height height    
     
-
-
 sizeExtend(width=inherit, height=inherit) 
     width width
     height height
-
 
 z(layer=20, set=false) 
     
@@ -155,7 +144,6 @@ z(layer=20, set=false)
      else 
         z-index  layer
     
-
 //end -------- Size  ----
 
 
@@ -166,9 +154,7 @@ margin(arg, auto=false)
     else 
         margin arg
     
-
 //end -------- Margin  ----
-
 
 
 // Mixin texts 
@@ -210,7 +196,6 @@ t(type=center)
     if type == line-through or type == depor or type == de-por or type == oferta or type == offer 
     	text-decoration line-through
     
-
 //end -------- aligns texts  ----
 
 // Mixins Decorates
@@ -227,7 +212,6 @@ t(type=center)
  transparent(c=transparent) 
     background-color c
 
-
  backreplace(path, width=auto, height=auto, imgRpl=false) 
     background-image url(path)
     background-repeat no-repeat
@@ -237,25 +221,22 @@ t(type=center)
     if imgRpl == true 
         text-indent -999em
     
-    
-
 //end -------- Backgrounds  ----
 
 outline(color=#333, size=1px, style=solid) 
     outline size style color
 
-
 //----------- Borders  ----
 border(color=#333, size=1px, style=solid) 
     border size style color
 
- border-top (color=#333, size=1px, style=solid) 
+ border-top(color=#333, size=1px, style=solid) 
     border-top size style color
 
- border-right (color=#333, size=1px, style=solid) 
+ border-right(color=#333, size=1px, style=solid) 
     border-right size style color
 
- border-bottom (color=#333, size=1px, style=solid) 
+ border-bottom(color=#333, size=1px, style=solid) 
     border-bottom size style color
 
  border-left(color=#333, size=1px, style=solid) 
@@ -294,34 +275,27 @@ arrow(color=#333, size=8px, dir=bottom, content=false)
         display inline-block
         vertical-align middle
     
-    
     // valida a direcao do ponteiro, podendo ser top, bottom, right, left
     if dir == top 
         border-top size solid color
         border-left size solid transparent
         border-right size solid transparent
     
-    
     else if dir == bottom 
         border-bottom size solid color
         border-left size solid transparent
         border-right size solid transparent
-    
     
     else if dir == right 
         border-top size solid transparent
         border-bottom size solid transparent
         border-right size solid color
     
-    
     else 
         border-top size solid transparent
         border-left size solid color
         border-bottom size solid transparent
     
-    
-
-
 //end -------- Arrows  ----
 
 //----------- Selection  ----
@@ -346,8 +320,6 @@ select(back=#333, color=#f1f1f1)
         background back
         color color
     
-
-
 //end -------- Selection  ----
 
 
