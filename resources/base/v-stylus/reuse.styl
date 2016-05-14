@@ -9,11 +9,11 @@
 
 //  Mixins 
 
-/*! use - sample
-    input
-        +placeholder()
-            color #333
-*/
+/* use - sample
+ *   input
+ *       +placeholder()
+ *           color #333
+ */
 placeholder()
     &-webkit-input-placeholder
         block
@@ -42,15 +42,15 @@ display(display=inline-block, va=top)
         display inline-block
         vertical-align bottom
     
-    if va == left 
+    if display == left 
         display block
-        float left
+        float display
     
-    if va == right 
+    if display == right 
         display block
-        float right
+        float display
     
-    if va == center 
+    if display == center 
         display block
         margin 0 auto 0
     
