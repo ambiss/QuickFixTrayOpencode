@@ -1,0 +1,347 @@
+// ---- reuse variables and mixins in all website
+
+// : Variables 
+
+// end Variables;
+
+// ----
+
+
+// : Mixins 
+
+placeholder()
+    &::-webkit-input-placeholder
+        {block}
+    &:-moz-placeholder
+        {block}
+    &::-moz-placeholder
+        {block}
+    &:-ms-input-placeholder
+        {block}
+
+@mixin display($display: inline-block, $va: top) {
+    display: $display;
+    @if $display != block and $display != table {
+        vertical-align: $va;
+    }
+    
+    @if $display == middle {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    @if $display == top {
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    @if $display == bottom {
+        display: inline-block;
+        vertical-align: bottom;
+    }
+}
+
+@mixin transition($property: all, $duration: 0.3s, $effect: ease-in-out) {
+	-webkit-transition: $property $duration $effect;
+	-moz-transition: $property $duration $effect;
+	-ms-transition: $property $duration $effect;
+	transition: $property $duration $effect;
+}
+@mixin user-select($value:none) {
+    -webkit-user-select: $value;  
+    -moz-user-select: $value;     
+    -ms-user-select: $value;     
+    user-select: $value;  
+}
+
+@mixin ccX($value: -50%) {
+    -webkit-transform: translateX($value);
+    -moz-transform: translateX($value);
+    -ms-transform: translateX($value);
+    transform: translateX($value);
+}
+
+@mixin ccY($value: -50%) {
+    -webkit-transform: translateY($value);
+    -moz-transform: translateY($value);
+    -ms-transform: translateY($value);
+    transform: translateY($value);
+}
+@mixin translate($value: 0, $value-second: 0) {
+    -webkit-transform: translate($value, $value-second);
+    -moz-transform: translate($value, $value-second);
+    -ms-transform: translate($value, $value-second);
+    transform: translate($value, $value-second);
+}
+@mixin tY($value: 100%) {
+    -webkit-transform: translateY($value);
+    -moz-transform: translateY($value);
+    -ms-transform: translateY($value);
+    transform: translateY($value);
+}
+@mixin tX($value: 100%) {
+    -webkit-transform: translateX($value);
+    -moz-transform: translateX($value);
+    -ms-transform: translateX($value);
+    transform: translateX($value);
+}
+
+@mixin font($size: 12px, $weight: 400, $family: $helvetica, $line-height: 1.1) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+    line-height: $line-height;
+}
+
+
+// Mixins -- Size -- Adjustment -- Position
+//:------------ Size : ----
+@mixin size($width: auto, $height: auto, $type:false) {
+    @if $type == minw {
+        min-width: $width;
+        height: $height;
+        
+    } @else if $type == minh {
+        width: $width;
+        min-height: $height;
+        
+    } @else if $type == minwh {
+        min-width: $width;
+        min-height: $height;
+        
+    } @else {
+        width: $width;
+        height: $height;    
+    }
+}
+
+@mixin sizeExtend($width: inherit, $height: inherit) {
+    width: $width;
+    height: $height;
+}
+
+@mixin z($layer: 20, $set: false) {
+    
+    @if $layer == quite {
+        z-index: 9999;
+    } @else if $layer == full or $layer == max or $layer == maximo {
+        z-index: 999;
+    } @else if $layer == medium or $layer == medio {
+        z-index: 99;
+    } @else if $layer == bit or $layer == pouco {
+        z-index: 10;
+    } @else if $set == set or $set == relative or $set == true {
+        position: relative;
+    } @else if $set == absolute {
+        position: absolute;
+    } @else {
+        z-index : $layer;
+    }
+}
+//end -------- Size ; ----
+
+
+//:----------- Margin : ----
+@mixin margin($arg, $auto: false) {
+    @if $auto == true or $auto == auto {
+        margin: 0 auto 0;
+    }@else {
+        margin: $arg;
+    }
+}
+//end -------- Margin ; ----
+
+
+
+// Mixin texts :
+//:---------- align texts : ---
+@mixin t($type: center) {
+    @if $type == center {
+        text-align: center;
+    }
+    @if $type == left {
+        text-align: left;
+    }
+    @if $type == right {
+        text-align: right;
+    }
+    @if $type == justify {
+        text-align: justify;
+    }
+    @if $type == uppercase {
+        text-transform: uppercase;
+    }
+    @if $type == lowercase {
+        text-transform: lowercase;
+    }
+    @if $type == capitalize {
+        text-transform: capitalize;
+    }
+    @if $type == none {
+    	text-decoration: none;
+    }
+    @if $type == underline {
+    	text-decoration: underline;
+    }
+    @if $type == overline {
+    	text-decoration: overline;
+    }
+    @if $type == nowrap {
+    	white-space: $type;
+    }
+    @if $type == line-through or $type == depor or $type == de-por or $type == oferta or $type == offer {
+    	text-decoration: line-through;
+    }
+}
+//end -------- aligns texts ; ----
+
+// Mixins Decorates
+//:----------- Backgrounds : ----
+@mixin back($path, $color: transparent, $repeat: no-repeat, $position: 0 0) {
+    background: $color url($path) $repeat $position;
+}
+@mixin backimg($path) {
+    background-image: url($path);
+}
+@mixin backcolor($c: #fff) {
+    background-color: $c;
+}
+@mixin transparent($c: transparent) {
+    background-color: $c;
+}
+
+@mixin backreplace($path, $width: auto, $height: auto, $imgRpl: false) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    width: $width;
+    height: $height;
+    
+    @if $imgRpl == true {
+        text-indent: -999em;
+    }
+    
+}
+//end -------- Backgrounds ; ----
+
+@mixin outline($color: #333, $size: 1px, $style: solid) {
+    outline: $size $style $color;
+}
+
+//:----------- Borders : ----
+@mixin border($color: #333, $size: 1px, $style: solid) {
+    border: $size $style $color;
+}
+@mixin border-top ($color: #333, $size: 1px, $style: solid) {
+    border-top: $size $style $color;
+}
+@mixin border-right ($color: #333, $size: 1px, $style: solid) {
+    border-right: $size $style $color;
+}
+@mixin border-bottom ($color: #333, $size: 1px, $style: solid) {
+    border-bottom: $size $style $color;
+}
+@mixin border-left($color: #333, $size: 1px, $style: solid) {
+    border-left: $size $style $color;
+}
+@mixin border-transparent($size: 1px) {
+    border: $size solid transparent;
+} 
+@mixin border-t-transparent($size: 1px) {
+    border-top: $size solid transparent;
+} 
+@mixin border-r-transparent($size: 1px) {
+    border-right: $size solid transparent;
+} 
+@mixin border-b-transparent($size: 1px) {
+    border-bottom: $size solid transparent;
+} 
+@mixin border-l-transparent($size: 1px) {
+    border-left: $size solid transparent;
+} 
+@mixin border-tb-transparent($size: 1px) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+} 
+@mixin border-side-transparent($size: 1px) {
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+}
+//end -------- Borders ; ----
+
+//:----------- Arrows : ----
+@mixin arrow($color: #333, $size: 8px, $dir: bottom, $content: false) {
+    // valida se vai querer pseudo elemento :before ou :after
+    @if $content == true or $content == content {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    // valida a direcao do ponteiro, podendo ser top, bottom, right, left
+    @if $dir == top {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    }
+    
+    @else if $dir == bottom {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    }
+    
+    @else if $dir == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+    }
+    
+    @else {
+        border-top: $size solid transparent;
+        border-left: $size solid $color;
+        border-bottom: $size solid transparent;
+    }
+    
+}
+
+//end -------- Arrows ; ----
+
+//:----------- Selection : ----
+@mixin select($back: #333, $color: #f1f1f1) {
+    ::selection {
+        background: $back;
+        color: $color;
+    }
+    
+    ::-moz-selection {
+        background: $back;
+        color: $color;
+    }
+    
+    ::selection {
+        background: $back;
+        color: $color;
+    }
+    
+    ::-moz-selection {
+        background: $back;
+        color: $color;
+    }
+    
+    ::selection {
+        background: $back;
+        color: $color;
+    }
+    
+    ::-moz-selection {
+        background: $back;
+        color: $color;
+    }
+
+}
+//end -------- Selection ; ----
+
+
+// end Mixins;
+
+// ----
