@@ -101,26 +101,26 @@ font(size=12px, weight=400, family=helvetica, line-height=1.1)
 
 // Mixins -- Size -- Adjustment -- Position
 //------------ Size  ----
-size(width=auto, height=auto, type=false) 
+size(w=auto, h=auto, type=false) 
     if type == minw 
-        min-width width
-        height height
+        min-width w
+        height h
         
     else if type == minh 
-        width width
-        min-height height
+        width w
+        min-height h
         
     else if type == minwh 
-        min-width width
-        min-height height
+        min-width w
+        min-height h
         
     else 
-        width width
-        height height    
+        width w
+        height h    
     
 sizeExtend(width=inherit, height=inherit) 
-    width width
-    height height
+    width w
+    height h
 
 z(layer=20, set=false) 
     
