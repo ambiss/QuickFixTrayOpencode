@@ -25,7 +25,7 @@ placeholder()
     &:-ms-input-placeholder
         {block}
         
-// display
+//----------- display  ----
 d(d=inline-block, va=top) 
     display d
     
@@ -49,7 +49,8 @@ d(d=inline-block, va=top)
     if d == center 
         display block
         margin 0 auto 0
-    
+
+//----------- effects - animates  ----
 transition(property=all, duration=0.3s, effect=ease-in-out) 
 	-webkit-transition property duration effect
 	-moz-transition property duration effect
@@ -62,6 +63,7 @@ user-select(value=none)
     -ms-user-select value     
     user-select value  
 
+//----------- command elements Y and X  ----
 ccX(value=-50%) 
     -webkit-transform translateX(value)
     -moz-transform translateX(value)
@@ -99,7 +101,7 @@ font(size=12px, weight=400, family=helvetica, line-height=1.1)
     line-height line-height
 
 
-// Mixins -- Size -- Adjustment -- Position
+// -- Size -- Adjustment -- Position
 //------------ Size  ----
 size(w=auto, h=auto, type=false) 
     if type == minw 
@@ -121,6 +123,7 @@ size(w=auto, h=auto, type=false)
 sizeExtend(width=inherit, height=inherit) 
     width w
     height h
+//end -------- Size  ----
 
 z(layer=20, set=false) 
     
@@ -138,10 +141,8 @@ z(layer=20, set=false)
         position absolute
     else 
         z-index  layer
+//end -------- Adjustment layer  ----
     
-//end -------- Size  ----
-
-
 //----------- Margin  ----
 margin(arg, auto=false) 
     if auto == true or auto == auto 
@@ -153,7 +154,7 @@ margin(arg, auto=false)
 
 
 // Mixin texts 
-//---------- align texts  ---
+//---------- format texts  ---
 t(type=center) 
     if type == center 
         text-align center
@@ -180,7 +181,7 @@ t(type=center)
     if type == line-through or type == depor or type == de-por or type == oferta or type == offer 
     	text-decoration line-through
     
-//end -------- aligns texts  ----
+//end -------- format texts t universal ----
 
 // Mixins Decorates
 //----------- Backgrounds  ----
@@ -273,7 +274,7 @@ arrow(color=#333, size=8px, dir=bottom, content=false)
         content ''
         position absolute
     
-    // valida a direcao do ponteiro, podendo ser top, bottom, right, left
+    /* valida a direcao do ponteiro, podendo ser top, bottom, right, left */
     if dir == top 
         border-top size solid color
         border-left size solid transparent
