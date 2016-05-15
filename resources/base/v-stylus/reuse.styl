@@ -10,10 +10,11 @@
 //  Mixins 
 
 /* use - sample
- *   input
+ *  input
  *       +placeholder()
- *           color #333
+ *          color #fff
  */
+
 placeholder()
     &::-webkit-input-placeholder
         {block}
@@ -23,34 +24,28 @@ placeholder()
         {block}
     &:-ms-input-placeholder
         {block}
-
-display(display=inline-block, va=top) 
-    display display
+// display
+d(d=inline-block, va=top) 
+    display d
     
-    if display != block and display != table 
+    if d != block and d != table 
         vertical-align va
-    
-    if display == middle 
+    if d == middle 
         display inline-block
         vertical-align middle
-    
-    if display == top 
+    if d == top 
         display inline-block
         vertical-align top
-    
-    if display == bottom 
+    if d == bottom 
         display inline-block
         vertical-align bottom
-    
-    if display == left 
+    if d == left 
         display block
-        float display
-    
-    if display == right 
+        float d
+    if d == right 
         display block
-        float display
-    
-    if display == center 
+        float d
+    if d == center 
         display block
         margin 0 auto 0
     
@@ -109,12 +104,15 @@ size(width=auto, height=auto, type=false)
     if type == minw 
         min-width width
         height height
+        
     else if type == minh 
         width width
         min-height height
+        
     else if type == minwh 
         min-width width
         min-height height
+        
     else 
         width width
         height height    
@@ -157,23 +155,23 @@ margin(arg, auto=false)
 //---------- align texts  ---
 t(type=center) 
     if type == center 
-       text-align center
+        text-align center
     if type == left 
-       text-align left
+        text-align left
     if type == right 
-       text-align right
+        text-align right
     if type == justify 
-       text-align justify
+        text-align justify
     if type == uppercase 
-       text-transform uppercase
+        text-transform uppercase
     if type == lowercase 
-       text-transform lowercase
+        text-transform lowercase
     if type == capitalize 
-       text-transform capitalize
+        text-transform capitalize
     if type == none 
-       text-decoration none
-	if type == underline 
-		text-decoration underline
+    	text-decoration none
+    if type == underline 
+    	text-decoration underline
     if type == overline 
     	text-decoration overline
     if type == nowrap 
@@ -204,7 +202,7 @@ t(type=center)
     height height
     
     if imgRpl == true 
-       text-indent -999em
+        text-indent -999em
     
 //end -------- Backgrounds  ----
 
@@ -255,10 +253,24 @@ border-side-transparent(size=1px)
 //----------- Arrows  ----
 arrow(color=#333, size=8px, dir=bottom, content=false) 
     // valida se vai querer pseudo elemento before ou after
-    if content == true or content == content 
+    if content == true
+        content ''
+        display inline-block
+        vertical-align top
+        
+    if content == middle
         content ''
         display inline-block
         vertical-align middle
+        
+    if content == bottom
+        content ''
+        display inline-block
+        vertical-align bottom
+        
+    if content == absolute
+        content ''
+        position absolute
     
     // valida a direcao do ponteiro, podendo ser top, bottom, right, left
     if dir == top 
@@ -288,6 +300,7 @@ select(back=#333, color=#f1f1f1)
     selection 
         background back
         color color
+    
     -moz-selection 
         background back
         color color
