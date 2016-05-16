@@ -24,7 +24,27 @@ placeholder()
         {block}
     &:-ms-input-placeholder
         {block}
-        
+
+
+// functions return width and respective height of images JAVASCRIPT API - deeper mixin
+/* use mixin
+ * div#page
+ *   h2
+ *     back('img/goomba.png', 'replacement')
+ */
+ 
+w(img)
+    width image-size(img)[0]
+h(img)
+    height image-size(img)[1]
+
+sback(img, r=false)
+    background url(img) no-repeat 0 0
+    w(img)
+    h(img)
+    if r == true || r=='replacement' || r == replacement
+        text-indent -9999em
+
 //----------- display  ----
 d(d=inline-block, va=top) 
     display d
