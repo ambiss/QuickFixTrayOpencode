@@ -127,12 +127,20 @@ vc(h=auto) // alinhamento vertical
     
 //end -------- Command elements Y and X  ----
 
+// -- Fonts -- Flexible Fonts
 font(size=12px, weight=400, family=helvetica, line-height=1.1) 
     font-size size
     font-weight weight
     font-family family
     line-height line-height
-
+    
+ff(targ=12, family=Helvetica, weight=400, lh=1.1, type=rem, context=16)
+    calc = (targ / context)
+    font-size unit(calc, type)
+    font-family family
+    font-weight weight
+    line-height lh
+//end -------- Fonts -- Flexible Fonts  ----
 
 // -- Size -- Adjustment -- Position
 //------------ Size  ----
