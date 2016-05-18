@@ -194,6 +194,9 @@ $footer: rgba(232, 229, 219, 1);
     @if $type == nowrap {
     	white-space: $type;
     }
+    @if $type == break or $type == quebrar {
+    	word-break: break-all;
+    }
     @if $type == line-through or $type == depor or $type == de-por or $type == oferta or $type == offer {
     	text-decoration: line-through;
     }
