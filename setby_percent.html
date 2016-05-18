@@ -6,18 +6,17 @@
 {# antes de qualquer coisa deve-se validar que o produto nao tenha variacao como o IF a seguir #}
 {% if not product.has_other_prices %}
 
-    {# valida se o produto encontra-se configurado no ADM como em promocao #}
-    {% if promotion %}
+    {% set price_offer  = product.price_offer %}
+    {# valida se o produto encontra-se configurado no ADM como em promocao ou se o preco esteja acima de zero #}
+    {% if promotion  or price_offer > 0 %}
     <div class="get-discount">
         {% set price        = product.price %}
-        {% set price_offer  = product.price_offer %}
-        
         {% set res_price   = price - price_offer %}
         {% set setby       = res_price / price * 100 %}
         
         {# garante que o produto tenha a exibição da oferta se tiver no minimo 1% de desconto #}
         {% if setby >= 1 %}
-        <span class="format-number">-{{ setby|number_format }}%</span>
+        <span class="format-number">{{ setby|number_format }}%</span>
         {% endif %}
     </div>
     {% endif %}
