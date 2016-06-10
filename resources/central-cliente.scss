@@ -1,0 +1,95 @@
+.page-central_cliente {
+    .central-breadcrumb {
+        position: absolute;
+        left: -999em;
+    }
+    
+    .central-conteudo {
+        padding-top: 2em;    
+    }
+    
+    #ProdBlock {
+        display: none;
+    }
+    
+    .central-cliente {
+        padding: 1em 5em 0;
+        
+        h4 {
+            border-bottom: 1px solid $alter-central-color;
+            color: $alter-identity;
+            
+            @include ff(30, $main, 600, 2); 
+            @include t(no);
+        }
+        
+         li a {
+            color: $text-central-color;
+            
+            @include ff(14, $main, 400);
+        }
+    }
+    
+    .central-menu {
+        .icoPai.central-icons-pai {
+            h2 {
+                color: $alter-identity;
+                @include ff(14, $main);
+                padding-bottom: 1em;
+            }
+        }
+        
+        .icoFilho {
+            border: 0;
+            @include fluid(120, $viewport, padding-left, vw);
+        }
+    }
+    
+    .icoPai {
+        position: relative;
+        padding: 28px 0;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: -12px; left: 0;
+            
+            background-color: #f6f6f6;
+            height: 1px;
+            @include fluid(1200, $viewport, width, vw);
+        }
+        
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    
+    .central-saudacao {
+        color: $alter-color;
+        @include ff(12, $main);
+        
+        h2 {
+            color: $alter-identity;
+            @include ff(15, $main, 500);
+        }
+        
+        p {
+            color: $alter-color;
+            @include ff(12, $main, 400, 5);
+            padding: 0 0 1em;
+        }
+    }
+    
+    .central-titulo {
+        h1 {
+            color: $alter-identity;
+            
+            @include ff(24, $main);
+            @include t(no); // no uppercase
+        }
+    }
+    
+} // page-central_cliente
+
