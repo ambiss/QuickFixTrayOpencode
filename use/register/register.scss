@@ -1,0 +1,185 @@
+.page-register {
+    .page-content {
+            
+    }
+    
+    h1 {
+        color: $alter-identity;
+        @include ff(17.76, $less, 700, 2);
+        
+        border-bottom: 1px solid #e0e0e0;
+        margin-left: 12px
+    }
+    
+    h2 {
+        color: $alter-identity;
+        @include ff(20, $less, 700);
+    }
+    
+    #fisica,
+    #juridica {
+        margin: 1em 0 0;
+        
+        p {
+            font-size: 0;
+        }
+    }
+    
+    #CadastroAbas,
+    #ProdAbas {
+        padding: 0;
+    }
+    
+    #CadastroAbas li a {
+        background: #fff;
+        border-bottom: 1px solid #dadada;
+        border-radius: 2px;
+        color: $alter-color;
+    }
+    
+    #CadastroAbas .aberta a, 
+    #ProdAbas .aberta a {
+        background: $identity;
+        border: 1px solid $identity;
+        color: #fff;
+        
+        &:hover {
+            color: #fff;
+        }
+    }
+    
+    #CadastroAbas, #ProdAbas {
+        border: 0;
+    }
+    
+    .obriga.red {
+        &:before {
+            content: '';
+            @include display(middle);
+            
+            background-color: red;
+            
+            width: 2.8px;
+            height: 20px;
+            margin-left: 2px;
+        }
+    }
+    
+    button,
+    .botoes_personalizados_enviar {
+        float: left;
+        padding: 1em 0 3em;
+    }
+    
+    span.msg-add {
+        &:before {
+            content: 'Quero receber emails promocionais';
+            
+            color: $alter-color;
+            @include ff(14, $main, 400, 1.4);
+            @include display();
+            margin-left: 5px;
+        }
+    }
+    
+    #fisica + strong,
+    #juridica + strong {
+        display: none;
+    }
+    
+    #pf_nome_cliente,
+    #pj_nome_cliente,
+    #razao_social {
+        @media screen and (max-width: 50em) { width: 86%;   }
+        @media screen and (max-width: 22em) { width: 99.9%; }
+    }
+    
+    fieldset {
+        color: #9b9b9b;
+        @include ff(15, $main);
+    }
+    
+    @media screen and (max-width: 22em) { 
+        input {
+            width: 99.9%; 
+        }
+    }
+    
+    #frm2 label {
+        font-size: 0;
+        
+        #pf_sexo_m ~ span,
+        #pf_sexo_f ~ span {
+            color: #666;
+            font-size: 14px;
+            font-weight: 300;
+            font-family: 'Oswald', sans-serif;
+            
+            vertical-align: top !important; // ficar esperto tem important
+            padding: 0 5px 0;
+        }
+        
+        .msg-add-imp {
+            &:before {
+                content: 'Desejo receber e-mails promocionais';
+                display: inline-block;
+                vertical-align: top;
+                
+                color: #666;
+                font-size: 14px;
+                font-weight: 300;
+                font-family: 'Oswald', sans-serif;
+                
+                padding-left: 8px;
+            }
+        }
+    }
+    
+    #frm2 .board label.dif {
+        color: #666;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Oswald', sans-serif;
+        
+        padding: 0 3px;
+        vertical-align: top;
+        
+    }
+    
+    #frm2 input {
+        padding: 10px;
+        border-radius: 2px;
+        border: 0;
+        box-shadow: 0px 0px 3px #333;
+        margin: .2em 0;
+        
+        border-left: 3px solid #f00;
+        
+        font-size: 12px;
+    }
+    
+    #frm2 #telefone_cliente {
+        border-left: 3px solid #f00;
+    }
+    #frm2 .opcional {
+        border-left: 0;
+    }
+    
+    #frm2 input[type="checkbox"],
+    #frm2 input[type="radio"] {
+        box-shadow: 0 0 0 transparent;
+    }
+    
+    .mensagensErro {
+        color: #ff1a1a;
+        font-family: Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 1.1;
+        
+        display: block;
+        
+        padding: 5px;
+        margin-left: 0;
+        margin-top: 6px;
+    }
+} // page-register    
