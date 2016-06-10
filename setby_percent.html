@@ -7,7 +7,7 @@
 {% if not product.has_other_prices %}
 
     {% set price_offer  = product.price_offer %}
-    {# valida se o produto encontra-se configurado no ADM como em promocao ou se o preco esteja acima de zero #}
+    {# valida se o produto encontra-se configurado no ADM como em promocao ou se o preco em oferta esteja acima de zero #}
     {% if promotion  or price_offer > 0 %}
     <div class="get-discount">
         {% set price        = product.price %}
