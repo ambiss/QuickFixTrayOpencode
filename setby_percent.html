@@ -16,7 +16,7 @@
         
         {# garante que o produto tenha a exibição da oferta se tiver no minimo 1% de desconto #}
         {% if setby >= 1 %}
-        <span class="format-number">{{ setby|number_format }}%</span>
+        <span class="format-number">-{{ setby|number_format }}%</span>
         {% endif %}
     </div>
     {% endif %}
