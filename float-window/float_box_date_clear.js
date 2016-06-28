@@ -1,3 +1,8 @@
+/**
+ * Box flutuante para ser exibido com temporizador
+ * Baseado em segundos onde 60 equivale a 60 segundos
+ * A Formula usada em additioalTime equivale a 30 dias baseados em segundos
+ */
 jQuery(document).ready(function(){
     
     var currentDate = parseInt(new Date().getTime()/1000);
