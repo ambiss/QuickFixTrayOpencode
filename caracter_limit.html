@@ -1,7 +1,9 @@
 <div class="product">
+  
   {% if product.name|length > 35 %}
   <h2>{{ product.name[:35] }}...</h2>
   {% else %}
       <h2>{{ product.name}}</h2>
   {% endif %}
+
 </div>
