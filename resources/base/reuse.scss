@@ -336,6 +336,13 @@ $footer: rgba(232, 229, 219, 1);
 }
 //end -------- Selection ; ----
 
+@mixin appear($v: none) {
+    -webkit-appearance: $v;
+    -moz-appearance:    $v;
+    appearance:         $v;
+}
+
+
 
 // end Mixins;
 
