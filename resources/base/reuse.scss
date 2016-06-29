@@ -26,7 +26,7 @@ $footer: rgba(232, 229, 219, 1);
 
 @mixin display($display: inline-block, $va: top) {
     display: $display;
-    @if $display != block and $display != table {
+    @if $display != block and $display != table and $display != none {
         vertical-align: $va;
     }
     
