@@ -222,4 +222,18 @@
         
     } // media devices - smartphones
     
+    @media screen and (max-width: 20em) {
+        .comparator {
+            ul {
+               li {
+                    width: 99%;
+                    margin: 0 auto 0;
+                    max-width: 260px;
+                }
+                
+            } // ul
+            
+        } // comparator
+    } // media devices - iphones 4, 5 e SE
+    
 }// page-comparador
