@@ -1,176 +1,4 @@
-.page-comparador {
-    .container {
-        padding: 2rem;
-        
-        h1 {
-            font-family: $main;
-        }
-    }
-    
-    .comparatorTabs {
-        border-bottom: 1px solid $identity;
-        
-        ul {
-            border-bottom: 0;
-            padding: 2rem 0 0;
-        }
-        .aberta {
-            border: 0;
-            background: none;
-            @include ff(16, $main, 500);      
-            
-            a {
-                color: $identity;
-                background: none;
-                @include t(none);
-            }
-            a.closeCat {
-                border-radius: 50%;
-                border: 1px solid $alter-identity;
-                background-color: #eee;
-                    
-                @include display(block);
-                
-                font-size: 13px;
-                line-height: 1.5;
-                
-                width: 21.2px;
-                height: 21.2px;
-                
-                margin-top: 0;
-                padding: 0 5.1px;
-                
-                position: absolute;
-                right: 0;
-            }
-        }
-    }
-    
-    //Reset - Tags - limpar, zerar, comparador, comparator
-    .comparator ul li ul li {
-        background: none;
-    }
-    .Labels {
-        @include display(none);    
-    }
-    
-    .comparator ul li {
-        border-top: 0; 
-        border-right: 0; 
-        margin: 0 10px 0;
-    }
-    
-    // LEFT - Tags - resultados, informacoes adicionais a esquerda, esquerda
-    .left {
-        @include ff(15);
-        
-        strong {
-            color: $alter-identity;
-            @include ff(14, $main, 700);
-        }
-    }
-    
-    // Paginator - Tags - formatar paginacao, paginator
-    .btns-paginator {
-        color: $alter-identity;
-        @include ff(16.6);
-    }
-    .btn-proxima-pagina, .btn-ultima-pagina {
-        color: $identity;
-        @include t(none);
-        padding: 0 2px 0;
-    }
-    
-    .comparator {
-        ul {
-            padding: 1rem 0 0;
-            li {
-                a {
-                    color: $identity;
-                    @include ff(14, $main, 500);
-                }
-            }
-            .Labels ul {
-                .comparsionFoto, .comparsionInfoPreco, .displayMarca {
-                    background: none;
-                    border: 0;
-                    color: $alter-identity;
-                    @include ff(16, $main, 500);
-                }
-                
-            }
-            .displayDescricao {
-                color: $alter-color;
-                @include ff(14);
-            }
-            
-            .displayMarca {
-                border: 0;
-                color: $info-color;
-                @include ff(15.5);
-                padding: 1rem 0 0;
-            }
-            
-            .comparsionFoto {
-                height: 233px;
-                
-                > a {
-                    height: 120px;
-                    @include display(block);
-                }
-                
-                a.closeComp {
-                    border-color: $alter-identity;
-                    border-radius: 50%;
-                    
-                    text-decoration: none;
-                    
-                    height: 22px;
-                    width: 22px;
-                    
-                    padding: 3px;
-                    
-                    font-size: 13.3px;
-                }
-                
-                a[alt='Comprar'], a[title='Comprar'] {
-                    img {
-                        width: 0; height: 0;
-                    }
-                    
-                    @include display();
-                    padding: 1em 2em;
-                    background-color: $alter-identity;
-                    border-radius: 2px;
-                    color: #fff;
-                    vertical-align: bottom;
-                    
-                    &:before {
-                        content: 'Comprar';
-                        @include ff(18, $main, 500);
-                    }
-                }
-            }
-            
-            .comparsionInfoPreco {
-                border: 0;
-                color: $alter-identity;
-                @include ff(14, $main, 500);
-                
-                padding: 1rem 0 0;
-                
-                .precoAvista {
-                    color: $identity;
-                    @include ff(16, $main, 500);
-                    margin: 0;
-                }
-            }
-        } // ul    
-    }
-    
-    //DEVICES
-    
-    //DEVICES
+//DEVICES
     
     @media screen and (max-width: 50em) {
         .comparator ul li ul li {
@@ -204,6 +32,10 @@
                 .displayDescricao {
                     @include t(quebrar);
                     width: 290px;
+                }
+                
+                .comparsionFoto {
+                    width: 220px;
                 }
                 
             } // ul
@@ -241,6 +73,8 @@
         
     } // media devices - smartphones
     
+    
+    
     @media screen and (max-width: 20em) {
         .comparator {
             ul {
@@ -254,5 +88,3 @@
             
         } // comparator
     } // media devices - iphones 4, 5 e SE
-    
-}// page-comparador
