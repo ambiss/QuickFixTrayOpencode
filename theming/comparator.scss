@@ -170,6 +170,8 @@
     
     //DEVICES
     
+    //DEVICES
+    
     @media screen and (max-width: 50em) {
         .comparator ul li ul li {
             border: 0;
@@ -195,13 +197,30 @@
         } // comparator
     }
     
+    @media screen and (max-width: 44em) {
+        .comparator {
+            ul {
+                
+                .displayDescricao {
+                    @include t(quebrar);
+                    width: 260px;
+                }
+                
+            } // ul
+            
+        } // comparator
+    }
+    
     @media screen and (max-width: 40em) {
         .container {
-            width: 84%;    
+            width: 98%;    
         }
         
         .comparator {
             ul {
+                display: block;
+                width: 99%;
+                
                 .displayMarca {
                     display: none;
                 }
@@ -212,7 +231,7 @@
                 }
                 
                 li {
-                    width: 98%;
+                    width: 99%;
                     margin: 0 auto 0;
                 }
                 
