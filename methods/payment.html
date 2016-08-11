@@ -1,0 +1,107 @@
+<section class="method pay pure-u-1 pure-u-lg-3-4">
+    <h6>Pagamento e envio</h6>
+    <!-- odimensions 248px / 254px -- 240px / 246px -- 232px / 237px -- 226px / 231px -->
+
+    {% if( settings.payment_paypal ) %}
+    <div class="paypal item-method" data-method="Paypal">
+        <h5>Pague com Paypal</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_visa ) %}
+    <div class="visa item-method" data-method="Visa">
+        <h5>Pague com Cart&atilde;o Visa</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_master ) %}
+    <div class="master item-method" data-method="Mastercard">
+        <h5>Pague com Mastercard</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_amex ) %}
+    <div class="amex item-method" data-method="Amex">
+        <h5>Pague com cart&atilde;o American Express</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_elo ) %}
+    <div class="elo item-method" data-method="Elo">
+        <h5>Pague utilizando Elo</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_hipercard ) %}
+    <div class="hipercard item-method" data-method="Hipercard">
+        <h5>Pague com Hipercard</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_hiper ) %}
+    <div class="hiper item-method" data-method="Hiper">
+        <h5>Pague com Cart&atilde;o Hiper</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_boleto ) %}
+    <div class="boleto item-method" data-method="Boleto">
+        <h5>Pague com Boleto Banc&aacute;rio</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_bcash ) %}
+    <div class="bcash item-method" data-method="Boleto">
+        <h5>Pague usando Bcash</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_bradesco ) %}
+    <div class="bradesco item-method" data-method="Bradesco">
+        <h5>Pague pelo Bradesco</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_discover ) %}
+    <div class="discover item-method" data-method="Discover">
+        <h5>Pague com Discover</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_bb ) %}
+    <div class="bb item-method" data-method="Banco do Brasil">
+        <h5>Pague usando Banco do Brasil</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_hsbc ) %}
+    <div class="banrisul item-method" data-method="HSBC">
+        <h5>Pague usando HSBC</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_jcb ) %}
+    <div class="boleto item-method" data-method="JCB">
+        <h5>Pague com JCB</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_aura ) %}
+    <div class="aura item-method" data-method="Aura">
+        <h5>Pague com Aura</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_pagseguro ) %}
+    <div class="pagseguro item-method" data-method="PagSeguro">
+        <h5>Pague usando PagSeguro</h5>
+    </div>
+    {% endif %}
+    
+    {% if( settings.payment_peela ) %}
+    <div class="peela item-method" data-method="Peela">
+        <h5>Pague com Peela</h5>
+    </div>
+    {% endif %}
+    
+</section><!-- methods pay -->
