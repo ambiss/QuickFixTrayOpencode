@@ -690,7 +690,34 @@
     .container {
         padding: 2rem;
         font-family: $main;
+    }
+    
+    @media screen and (max-width: 47em) {
+        .breadcrumb {
+            padding-left: 2%;    
+        }
         
+        h1 {
+            padding-left: 2%;    
+        }
+        
+        .Pedidos td {
+            text-align: left;
+            padding-left: 6px;
+        }
+        
+        .Pedidos td:last-child {
+            font-size: 0;
+            > a {
+                display: block;
+                padding: 1px 1px 8px;
+                width: 86px;
+                margin: 0 auto 0;
+                font-size: 12px;
+                color: $identity;
+                text-align: left;
+            }
+        }
     }
 }
 
@@ -1179,6 +1206,11 @@
 .page-central_premiacao_historico,
 .page-central_premiacao_classificacao {
     
+    h1,
+    .breadcrumb {
+        padding-left: 2%;
+    }
+    
     .layout-flex {
         @include bottle(68%, 1rem);
     }
@@ -1219,8 +1251,17 @@
     
 } //page-central_premiacao_classificacao
 
+.page-central_premiacao_historico {
+    .board {
+        padding-left: 1%;
+    }    
+}
+
 .page-central_confirmar_pagamento,
 .page-central_bonus {
+    .Mapa {
+        display: none;
+    }
     
     .layout-flex {
         @include bottle(68%, 1rem);
@@ -1253,12 +1294,21 @@
             }
         }
     }
+    
+    @media screen and (max-width: 47em) {
+        .page-content {
+            padding: 1rem 0;
+        }
+    }
 }
 
 .page-central_listas {
+    .Seguro {
+        display: none;
+    }
     h1 {
         color: $identity !important;
-        padding-top: 1rem;
+        padding-top: 1rem 4px;
     }
 }
 
@@ -1267,6 +1317,18 @@
         .Seguro {
             display: none;
         }
+    }
+}
+
+.page-central_comissoes {
+    h1,
+    .breadcrumb,
+    .saldo_pontos {
+        padding-left: 2%;
+    }
+    
+    h1 {
+        padding-top: 9px;
     }
 }
 
@@ -1294,7 +1356,9 @@
             text-decoration: none;
             font-size: 12px;
         }
+        
     }
+    
     
     .relativity p,
     .relativity .change {
@@ -1303,6 +1367,20 @@
         font-family: Helvetica, Arial, sans-serif;
         font-size: 13px;
         font-weight: 300;
+        
+        text-align: left;
+    }
+    
+    @media screen and (max-width: 47em) {
+        .breadcrumb, h1 {
+            padding-left: 2%;
+        }
+        
+        relativity p {
+            text-align: left !important;
+        }
+        
+        .btsComment { position: static; }
     }
 }
 
