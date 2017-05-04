@@ -1,17 +1,17 @@
 {# Recurso para mostrar o quanto o comprador esta tendo de desconto no outlet na showcase de produtos #}
 {# Lingugaem: Twig/HTML, aplicado ao TrayOpencode #}
 {# Rotulo exibiria algo desta forma: `-20%` #}
-{# @profson december 2015 #}
+{# @friend december 2015 #}
 
-{# antes de qualquer coisa deve-se validar que o produto nao tenha variacao como o IF a seguir #}
+{# antes de qualquer coisa deve-se validar que o produto nao tenha variacao de preco como o IF a seguir #}
 {% if not product.has_other_prices %}
 
     {% set price_offer  = product.price_offer %}
     
     {# valida se o produto encontra-se configurado no ADM como em promocao e se o preco em oferta esteja acima de zero #}
-    {% if promotion  and price_offer > 0 %}
+    {% if price_offer > 0 %}
     <div class="get-discount">
-        {% set price        = product.price %}
+        {% set price       = product.price %}
         {% set res_price   = price - price_offer %}
         {% set setby       = res_price / price * 100 %}
         
