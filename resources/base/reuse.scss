@@ -160,7 +160,8 @@ $footer: rgba(232, 229, 219, 1);
 
 // Mixin texts :
 //:---------- powerfull texts and align/decorate texts : ---
-@mixin t($type:center) {
+
+@mixin text($type:center) {
     
     @if $type == nowrap {
     	white-space: $type;
@@ -169,7 +170,7 @@ $footer: rgba(232, 229, 219, 1);
     	white-space: normal
     }
     @if $type == normal or $type == no {
-    	text-decoration: none;
+    	text-transform: none;
     }
     @if $type == break or $type == quebrar {
         word-break: break-all;
@@ -183,7 +184,7 @@ $footer: rgba(232, 229, 219, 1);
     @if $type == uppercase or $type == lowercase or $type == capitalize or $type == inherit {
         text-transform: $type;
     }
-    @if $type == line-through or $type == depor or $type == de-por or $type == oferta or $type == offer{  
+    @if $type == line-through or $type == depor or $type == de-por or $type == oferta or $type == offer {  
     	text-decoration: line-through;
     }
 
@@ -191,18 +192,20 @@ $footer: rgba(232, 229, 219, 1);
 //end -------- powerfull texts and align/decorate texts ; ----
 
 // Mixins Decorates
-//:----------- Backgrounds : ----
-@mixin back($path, $color: transparent, $repeat: no-repeat, $position: 0 0) {
-    background: $color url($path) $repeat $position;
+@mixin shadow($color: #aaa, $params: 1px 2px 6px, $inset:false) {
+    box-shadow: $params $color;
+    
+    @if $inset == true or $inset == inset {
+        box-shadow: $params, $color, inset;    
+    }
 }
-@mixin backimg($path) {
-    background-image: url($path);
-}
-@mixin backcolor($c: #fff) {
-    background-color: $c;
-}
-@mixin transparent($c: transparent) {
-    background-color: $c;
+
+@mixin show($show: true) {
+    @if $show == true or $show == show or $show == mostrar or $show == exibir {
+        opacity: 1; visibility: visible;
+    }@else {
+       opacity: 0; visibility: hidden; 
+    }
 }
 
 @mixin backreplace($path, $width: auto, $height: auto, $imgRpl: false) {
@@ -216,7 +219,6 @@ $footer: rgba(232, 229, 219, 1);
     }
     
 }
-//end -------- Backgrounds ; ----
 
 @mixin outline($color: #333, $size: 1px, $style: solid) {
     outline: $size $style $color;
